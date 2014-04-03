@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html dir="ltr" class="ve-not-available client-js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Partition (number theory) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="generator" content="MediaWiki 1.23wmf15">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Partition_%28number_theory%29">
+<link rel="stylesheet" href="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/load_002.css">
+<style>
+@media print{#centralNotice{display:none}}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ddb0c98a055632ae8e349c9cf48ac703 */
+.tipsy{padding:5px;position:absolute;z-index:100000;cursor:default}.tipsy-inner{padding:5px 8px 4px 8px; background-color:#ffffff;border:solid 1px #a7d7f9;color:black;max-width:15em;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px; }.tipsy-arrow{position:absolute;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAACVBMVEX5+fmn1/n///9s6BFKAAAAAXRSTlMAQObYZgAAACpJREFUCB1jZBD4wMiQMoeRcUU4I9uSaYxSE54xZjn8AtMgPkgcJA9UBwAeDw1Qrb3pVAAAAABJRU5ErkJggg==) no-repeat top left;background:url(//bits.wikimedia.org/static-1.23wmf15/resources/jquery.tipsy/images/tipsy.png?2014-02-20T16:50:00Z) no-repeat top left!ie;width:11px;height:6px} .tipsy-n .tipsy-arrow{top:0px;left:50%;margin-left:-5px} .tipsy-nw .tipsy-arrow{top:1px;left:10px} .tipsy-ne .tipsy-arrow{top:1px;right:10px} .tipsy-s .tipsy-arrow{bottom:0px;left:50%;margin-left:-5px;background-position:bottom left} .tipsy-sw .tipsy-arrow{bottom:0px;left:10px;background-position:bottom left} .tipsy-se .tipsy-arrow{bottom:0px;right:10px;background-position:bottom left} .tipsy-e .tipsy-arrow{top:50%;margin-top:-5px;right:1px;width:5px;height:11px;background-position:top right} .tipsy-w .tipsy-arrow{top:50%;margin-top:-5px;left:0px;width:6px;height:11px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4c0ad2434bc128d18de6fc4d2de65914 */
+.uls-menu a{cursor:pointer}.uls-menu.callout .caret-before{border-top:20px solid transparent;border-right:20px solid #C9C9C9;border-bottom:20px solid transparent;display:inline-block;left:-21px;top:30px;position:absolute}.uls-menu.callout .caret-after{border-top:20px solid transparent;border-right:20px solid #FCFCFC;border-bottom:20px solid transparent;display:inline-block;left:-20px;top:30px;position:absolute}.uls-ui-languages button{width:23%;text-overflow:ellipsis;margin-right:4%}button.uls-more-languages{width:auto}.settings-title{font-size:11pt}.settings-text{color:#555555;font-size:9pt}div.display-settings-block:hover .settings-text{color:#252525}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:22d1681fa868b4ff4fbcb1ec1e58a9ea */
+.mw-editsection{white-space:nowrap;padding-right:0.25em; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555} .mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-left:-0.25em;margin-right:0.25em;color:#555} .mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-right:-0.25em;margin-left:0.25em;color:#555}.ve-tabmessage-appendix{font-size:0.7em;vertical-align:top;line-height:1.43em;padding-left:0.5em; background-image:none !important;display:inline !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:10d5f32d441941e72673fc73cdfe14a9 */
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0dcacc990dd02e7db9669ab3090b80f1 */
+.wbc-editpage{list-style:none none;text-align:right;padding-right:.5em !important}.wbc-editpage > a{padding-left:11px;background:no-repeat left center}.wbc-editpage > a:link,.wbc-editpage > a:visited{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf15/extensions/Wikidata/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil.png?2014-02-20T16:55:00Z)!ie;color:#797979 !important}.wbc-editpage > a:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf15/extensions/Wikidata/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil-Hover.png?2014-02-20T16:55:00Z)!ie;color:#0645AD !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0b8b2e867bea7b28608af9b44926050e */</style><style>
+.cite-accessibility-label{position:absolute !important; top:-99999px;clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6989008023386f50501783f5c5ff5345 */
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:16px;width:16px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/e/ed/Cog.png);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-o-transition:opacity 0.15s;-ms-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3c614aa75cecefe56b27b5e3c9197b7e */
+div#editpage-specialchars{display:block;margin-top:.5em;border:1px solid #c0c0c0;padding:.3em}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:29386c84f9c8f19dfb410df7e5be154b */
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba4e3603af357b5172e85672664d39a8 */
+#p-lang .uls-settings-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAMAAAAVMLmlAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALpQTFRF////W1tbgICAWVlZgICAUVFRgICAWVlZhYWFUlJShYWFVFRUgYGBVVVVgYGBVVVVgICAVFRUVVVVVlZWgYGBgICAVFRUgYGBVFRUgICAgYGBVVVVVVVVgYGBVlZWgYGBVFRUgICAVFRUgICAVVVVgICAVlZWgICAVFRUgICAVVVVgICAVFRUgICAVlZWgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICA9Fa9bgAAADx0Uk5TAA4OFBQWFhcXGRlJSUtLWlpbXV9fYGFhZGRlZmlpa2twcIiIioqPj5GRn5+goKGh6+vv7/Dw+fn8/P7+YuRUVgAAAOlJREFUGBmNwcdWAgEURMFLFCUaAcWAEhQYHBRmCN3//1u+BYcVC6s4p2U3OLrrVxN7Xn7uELoH5w65Dx1g6JNnoLazfz++VnZehkZir4pQ3NjzBg5TwtgBhzFh6kDr294UobiykxZc7ezVdLyx8yrw6pM+8GjnDjsf7gj3/WpiJ7Vhl6OW3eC/mlKdo5teZSHNSoM24XqvTCHTvg0MdDIASpn08/6ZSlkJ6jMpLUBhLc3qKEwIIwUURoSJAs2ltC5AIZUWTbjcSulktJayCvCikx7wJG0VttrfEp5eLpfS4uLtgaOmVOeMP8BAM9RClMO9AAAAAElFTkSuQmCC) no-repeat right top;background:transparent url(//bits.wikimedia.org/static-1.23wmf15/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.png?2014-02-20T16:55:00Z) no-repeat right top!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzMiI+PGRlZnM+PHBhdGggZD0iTTEzLjU4MiA2LjYzMmgtMS4wNjRjLS4xMzMtLjUzOC0uMzU0LTEuMDY1LS42NDUtMS41NTJsLjc1LS43NWMuMTY0LS4xNjQuMTY0LS40MjkgMC0uNTkzbC0xLjM1OS0xLjM2Yy0uMTY0LS4xNjQtLjQzLS4xNjQtLjU5NCAwbC0uNzUuNzVjLS40OS0uMjk0LTEuMDEyLS41MTItMS41NTEtLjY0NXYtMS4wNjRjMC0uMjMxLS4xODctLjQxOC0uNDE5LS40MThoLTEuOTE4Yy0uMjMxIDAtLjQxOC4xODctLjQxOC40MTh2MS4wNjNjLS41NDEuMTM1LTEuMDYyLjM1Mi0xLjU1Mi42NDZsLS43NS0uNzVjLS4xNjQtLjE2NC0uNDI5LS4xNjQtLjU5MyAwbC0xLjM2IDEuMzZjLS4xNjQuMTY0LS4xNjQuNDI5IDAgLjU5M2wuNzUuNzVjLS4yOTIuNDg4LS40OTQgMS4wMTUtLjYyNyAxLjU1MWgtMS4wNjRjLS4yMzEgMC0uNDE4LjE4Ny0uNDE4LjQxOXYxLjkxOGMwIC4yMzEuMTg3LjQxOC40MTguNDE4aDEuMDQ2Yy4xMzQuNTQyLjM1MSAxLjA2Mi42NDUgMS41NTFsLS43NS43NWMtLjE2NC4xNjQtLjE2NC40MjkgMCAuNTkzbDEuMzYgMS4zNmMuMTY0LjE2NC40MjkuMTY0LjU5MyAwbC43NS0uNzVjLjQ5MS4yOTYgMS4wMS40OTMgMS41NTEuNjI3djEuMDYzYy4wMDEuMjMzLjE4OC40Mi40MTkuNDJoMS45MThjLjIzMSAwIC40MTktLjE4Ny40MTktLjQxOHYtMS4wNjNjLjU0Mi0uMTM0IDEuMDYxLS4zMzMgMS41NTEtLjYyN2wuNzUuNzVjLjE2NC4xNjQuNDMuMTY0LjU5NCAwbDEuMzU5LTEuMzZjLjE2NC0uMTY0LjE2NC0uNDI5IDAtLjU5M2wtLjc1LS43NWMuMjk1LS40ODkuNTEtMS4wMTMuNjQ1LTEuNTUxaDEuMDY0Yy4yMy0uMDAyLjQxOC0uMTg5LjQxOC0uNDJ2LTEuOTE4YzAtLjIzMi0uMTg4LS40MTgtLjQxOC0uNDE4em0tNi41ODIgNC4wMTJjLTEuNDYxIDAtMi42NDUtMS4xODQtMi42NDUtMi42NDRzMS4xODQtMi42NDQgMi42NDUtMi42NDQgMi42NDUgMS4xODQgMi42NDUgMi42NDQtMS4xODQgMi42NDQtMi42NDUgMi42NDR6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHhsaW5rOmhyZWY9IiNhIiBmaWxsPSIjODA4MDgwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxNikiIGZpbGw9IiM1NTUiLz48L3N2Zz4=);background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf15/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2014-02-20T16:55:00Z)!ie;background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzMiI+PGRlZnM+PHBhdGggZD0iTTEzLjU4MiA2LjYzMmgtMS4wNjRjLS4xMzMtLjUzOC0uMzU0LTEuMDY1LS42NDUtMS41NTJsLjc1LS43NWMuMTY0LS4xNjQuMTY0LS40MjkgMC0uNTkzbC0xLjM1OS0xLjM2Yy0uMTY0LS4xNjQtLjQzLS4xNjQtLjU5NCAwbC0uNzUuNzVjLS40OS0uMjk0LTEuMDEyLS41MTItMS41NTEtLjY0NXYtMS4wNjRjMC0uMjMxLS4xODctLjQxOC0uNDE5LS40MThoLTEuOTE4Yy0uMjMxIDAtLjQxOC4xODctLjQxOC40MTh2MS4wNjNjLS41NDEuMTM1LTEuMDYyLjM1Mi0xLjU1Mi42NDZsLS43NS0uNzVjLS4xNjQtLjE2NC0uNDI5LS4xNjQtLjU5MyAwbC0xLjM2IDEuMzZjLS4xNjQuMTY0LS4xNjQuNDI5IDAgLjU5M2wuNzUuNzVjLS4yOTIuNDg4LS40OTQgMS4wMTUtLjYyNyAxLjU1MWgtMS4wNjRjLS4yMzEgMC0uNDE4LjE4Ny0uNDE4LjQxOXYxLjkxOGMwIC4yMzEuMTg3LjQxOC40MTguNDE4aDEuMDQ2Yy4xMzQuNTQyLjM1MSAxLjA2Mi42NDUgMS41NTFsLS43NS43NWMtLjE2NC4xNjQtLjE2NC40MjkgMCAuNTkzbDEuMzYgMS4zNmMuMTY0LjE2NC40MjkuMTY0LjU5MyAwbC43NS0uNzVjLjQ5MS4yOTYgMS4wMS40OTMgMS41NTEuNjI3djEuMDYzYy4wMDEuMjMzLjE4OC40Mi40MTkuNDJoMS45MThjLjIzMSAwIC40MTktLjE4Ny40MTktLjQxOHYtMS4wNjNjLjU0Mi0uMTM0IDEuMDYxLS4zMzMgMS41NTEtLjYyN2wuNzUuNzVjLjE2NC4xNjQuNDMuMTY0LjU5NCAwbDEuMzU5LTEuMzZjLjE2NC0uMTY0LjE2NC0uNDI5IDAtLjU5M2wtLjc1LS43NWMuMjk1LS40ODkuNTEtMS4wMTMuNjQ1LTEuNTUxaDEuMDY0Yy4yMy0uMDAyLjQxOC0uMTg5LjQxOC0uNDJ2LTEuOTE4YzAtLjIzMi0uMTg4LS40MTgtLjQxOC0uNDE4em0tNi41ODIgNC4wMTJjLTEuNDYxIDAtMi42NDUtMS4xODQtMi42NDUtMi42NDRzMS4xODQtMi42NDQgMi42NDUtMi42NDQgMi42NDUgMS4xODQgMi42NDUgMi42NDQtMS4xODQgMi42NDQtMi42NDUgMi42NDR6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHhsaW5rOmhyZWY9IiNhIiBmaWxsPSIjODA4MDgwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxNikiIGZpbGw9IiM1NTUiLz48L3N2Zz4=);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf15/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2014-02-20T16:55:00Z)!ie;height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:b2e67584e2228f57a20bd65b248df072 */
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none} caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6c1d24e90626cec584f0869483f983e7 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf15/resources/mediawiki.action/images/green-checkmark.png?2014-02-20T16:50:00Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:5434ecb18caf9027a04b9a419dea9a94 */
+#container{position:relative;min-height:100%}#container,video{width:100%;height:100%}#playerContainer{overflow:hidden;position:relative;height:100%;background:#000}#videoHolder{position:relative;overflow:hidden}.fullscreen #playerContainer{position:absolute !important;width:100% !important;height:100%! important;z-index:9999;min-height:100%;top:0;left:0;margin:0}.mwEmbedPlayer{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0}.modal_editor{ left:10px;top:10px;right:10px;bottom:10px;position:fixed;z-index:100}.displayHTML a:visited{color:white}.loadingSpinner{width:32px;height:32px;display:block;padding:0px;background-image:url(//bits.wikimedia.org/static-1.23wmf15/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/loading_ani.gif?2014-02-20T16:53:20Z)}.mw-imported-resource{border:thin solid black}.kaltura-icon{background-image:url(//bits.wikimedia.org/static-1.23wmf15/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/kaltura_logo_sm_transparent.png?2014-02-20T16:53:20Z) !important;background-repeat:no-repeat;display:block;height:12px;width:12px;margin-top:2px !important;margin-left:3px !important}.mw-fullscreen-overlay{background:rgb(0,0,0) none repeat scroll 0% 0%;position:fixed;top:0pt;left:0pt;width:100%;height:100%;-moz-background-clip:border;-moz-background-origin:padding;-moz-background-inline-policy:continuous} .play-btn-large{width:70px;height:53px;background :url(//bits.wikimedia.org/static-1.23wmf15/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button.png?2014-02-20T16:53:20Z);position :absolute;cursor :pointer;border :none !important;z-index :1}.play-btn-large:hover{background :url(//bits.wikimedia.org/static-1.23wmf15/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button_hover.png?2014-02-20T16:53:20Z)}.carouselContainer{position :absolute;width :100%;z-index :2}.carouselVideoTitle{position :absolute;top :0px;left :0px;width :100%;background :rgba(0,0,0,0.8);color :white;font-size :small;font-weight :bold;z-index :2}.carouselVideoTitleText{display :block;padding :10px 10px 10px 20px}.carouselTitleDuration{position :absolute;top :0px;right :0px;padding :2px;background-color :#5A5A5A;color :#D9D9D9;font-size :smaller;z-index :2}.carouselImgTitle{position :absolute;width :100%;text-align :center;color :white;font-size :small;background :rgba(0,0,0,0.4)}.carouselImgDuration{position :absolute;top :2px;left :2px;background :rgba( 0,0,0,0.7 );color :white;padding :1px 6px;font-size :small}.carouselPrevButton,.carouselNextButton{display :block;position :absolute;bottom:23px}.carouselPrevButton{left :5px}.carouselNextButton{right:6px}.alert-container{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-o-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-moz-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-ms-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.04,rgb(215,215,215)),color-stop(0.55,rgb(230,230,230)),color-stop(1,rgb(255,255,255)));margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;max-width:80%;max-height:30%}.alert-title{background-color :#E6E6E6;padding :5px;border-bottom :1px solid #D1D1D1;font-weight :normal !important;font-size:14px !important;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px }.alert-message{padding :5px;font-weight :normal !important;text-align:center;font-size:14px !important}.alert-buttons-container{text-align:center;padding-bottom:5px}.alert-button{background-color:#474747;color:white;-webkit-border-radius:.5em;-moz-border-radius:.5em;border-radius:.5em;padding:2px 10px;background-image:linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-o-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-moz-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-ms-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-gradient( linear,left bottom,left top,color-stop(0.04,rgb(25,25,25)),color-stop(0.55,rgb(47,47,47)),color-stop(0.68,rgb(71,71,71)) )}.alert-text{color :black !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:f69093366ac935d48348cf3c8e372581 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/load.css">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/load_005.php"></script><script src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/load_003.php"></script><style title="spinjs"></style>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Partition_(number_theory)","wgTitle":"Partition (number theory)","wgCurRevisionId":597906863,"wgRevisionId":597906863,"wgArticleId":104790,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles containing potentially dated statements from June 2013","All articles containing potentially dated statements","Number theory","Combinatorics","Arithmetic functions","Integer sequences"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Partition_(number_theory)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Ferrers_diagram","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgArticleFeedbackv5Permissions":{"aft-reader":true,"aft-member":false,"aft-editor":false,"aft-monitor":false,"aft-administrator":false,"aft-oversighter":false,"aft-noone":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf15/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["ru-ru","ru","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikipedia","wgRedirectToFragment":"#Ferrers_diagram","aftv5Article":{"id":104790,"title":"Partition (number theory)#Ferrers diagram","namespace":0,"categories":["All articles containing potentially dated statements","Arithmetic functions","Articles containing potentially dated statements from June 2013","Combinatorics","Integer sequences","Number theory"],"permissionLevel":false},"wgWikibaseItemId":"Q1082910"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,
+"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"aftv5-last-filter":null,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":
+true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false
+,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:b12ab6cae4d52363f0a0bc1d4e1abcbe */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.redirectToFragment","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script><script src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/load.php"></script><script src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/checkLoggedIn" async=""></script>
+<script src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/geoiplookup"></script><link rel="dns-prefetch" href="http://meta.wikimedia.org/"><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf15/skins/vector/csshover.min.htc")}</style><![endif]--><script src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/load_004.php" async=""></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Partition_number_theory skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><div class="cn-ToUAmendment" id="centralNotice"><style type="text/css">
+
+#centralNotice.collapsed #ChangeToU2014_v1_anononly {
+ display: none;
+}
+
+#ChangeToU2014_v1_anononly {
+ position: relative;
+ overflow: hidden;
+ background: url(//upload.wikimedia.org/wikipedia/commons/0/0d/Gray-gradient1.png) bottom repeat-x;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#FFFFFF;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#ChangeToU2014_v1_anononly a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#ChangeToU2014_v1_anononly-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Wikimedia_logo_text_RGB.svg/50px-Wikimedia_logo_text_RGB.svg.png);
+ height: 50px;
+ width: 50px;
+ background-repeat: no-repeat;
+}
+
+#ChangeToU2014_v1_anononly #black-text {
+ font-size: 1.1em;
+ color: black;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+ font-weight:bold;
+}
+
+
+#ChangeToU2014_v1_anononly div#cn-toggle-box {
+ position: absolute;
+ z-index: 98;
+ top: 2px;
+ right: 6px;
+}
+
+#ChangeToU2014_v1_anononly div#cn-translation-link {
+ position:absolute;
+ z-index:50;
+ bottom: 0px;
+ right: 6px;
+ font-size: 0.7em;
+}
+
+#ChangeToU2014_v1_anononly #calltoaction {
+ padding-top: 5px;
+ color: #0645ad;
+}
+
+#cn-translation-link a:link, 
+#cn-translation-link a:visited, 
+#cn-translation-link a:hover { 
+ color: black; 
+} 
+
+</style>
+
+<div id="ChangeToU2014_v1_anononly">
+
+  <a class="cn-full-banner-click" href="http://meta.wikimedia.org/wiki/Terms_of_use/Paid_contributions_amendment" title="">
+<div id="ChangeToU2014_v1_anononly-logo"></div>
+    <div id="black-text">
+   Amending our Terms of Use: <br> Please comment on a proposed amendment regarding undisclosed paid editing.
+     </div>
+  </a>
+ <div id="cn-toggle-box">
+  <a href="#" title="Close" onclick="mw.centralNotice.hideBanner();return false;"><img src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/CloseWindow19x19.png" alt="close" border="0"></a>  
+ </div>
+</div></div><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Partition (number theory)</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">&nbsp;&nbsp;(Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Ferrers_diagram&amp;redirect=no" title="Ferrers diagram">Ferrers diagram</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:Ferrer_partitioning_diagrams.svg" class="image"><img alt="" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/300px-Ferrer_partitioning_diagrams.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ferrer_partitioning_diagrams.svg/450px-Ferrer_partitioning_diagrams.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ferrer_partitioning_diagrams.svg/600px-Ferrer_partitioning_diagrams.svg.png 2x" height="300" width="300"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Ferrer_partitioning_diagrams.svg" class="internal" title="Enlarge"><img src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" alt="" height="11" width="15"></a></div>
+<a href="http://en.wikipedia.org/wiki/Young_diagram#Diagrams" title="Young diagram" class="mw-redirect">Young diagrams</a>
+ associated to the partitions of the positive integers 1 through 8. They
+ are arranged so that images under the reflection about the main 
+diagonal of the square are conjugate partitions.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:Partitions_of_n_with_biggest_addend_k.svg" class="image"><img alt="" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/300px-Partitions_of_n_with_biggest_addend_k.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/46/Partitions_of_n_with_biggest_addend_k.svg/450px-Partitions_of_n_with_biggest_addend_k.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/46/Partitions_of_n_with_biggest_addend_k.svg/600px-Partitions_of_n_with_biggest_addend_k.svg.png 2x" height="246" width="300"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Partitions_of_n_with_biggest_addend_k.svg" class="internal" title="Enlarge"><img src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" alt="" height="11" width="15"></a></div>
+Partitions of <i>n</i> with biggest addend <i>k</i></div>
+</div>
+</div>
+<p>In <a href="http://en.wikipedia.org/wiki/Number_theory" title="Number theory">number theory</a> and <a href="http://en.wikipedia.org/wiki/Combinatorics" title="Combinatorics">combinatorics</a>, a <b>partition</b> of a positive <a href="http://en.wikipedia.org/wiki/Integer" title="Integer">integer</a> <i>n</i>, also called an <b>integer partition</b>, is a way of writing <i>n</i> as a <a href="http://en.wikipedia.org/wiki/Sum" title="Sum" class="mw-redirect">sum</a>
+ of positive integers. Two sums that differ only in the order of their 
+summands are considered the same partition. If order matters, the sum 
+becomes a <a href="http://en.wikipedia.org/wiki/Composition_%28number_theory%29" title="Composition (number theory)" class="mw-redirect">composition</a>. For example, 4 can be partitioned in five distinct ways:</p>
+<dl>
+<dd>4</dd>
+<dd>3 + 1</dd>
+<dd>2 + 2</dd>
+<dd>2 + 1 + 1</dd>
+<dd>1 + 1 + 1 + 1</dd>
+</dl>
+<p>The order-dependent composition 1 + 3 is the same partition as 3 + 1,
+ while 1 + 2 + 1 and 1 + 1 + 2 are the same partition as 2 + 1 + 1.</p>
+<p>A summand in a partition is also called a <b>part</b>. The number of partitions of <i>n</i> is given by the partition function <i>p</i>(<i>n</i>). So <i>p</i>(4) = 5. The notation <i>λ</i> <span class="Unicode">⊢</span> <i>n</i> means that <i>λ</i> is a partition of <i>n</i>.</p>
+<p>Partitions can be graphically visualized with <a href="http://en.wikipedia.org/wiki/Young_diagram" title="Young diagram" class="mw-redirect">Young diagrams</a> or <a href="http://en.wikipedia.org/wiki/Ferrers_diagram" title="Ferrers diagram" class="mw-redirect">Ferrers diagrams</a>. They occur in a number of branches of <a href="http://en.wikipedia.org/wiki/Mathematics" title="Mathematics">mathematics</a> and <a href="http://en.wikipedia.org/wiki/Physics" title="Physics">physics</a>, including the study of <a href="http://en.wikipedia.org/wiki/Symmetric_polynomial" title="Symmetric polynomial">symmetric polynomials</a>, the <a href="http://en.wikipedia.org/wiki/Symmetric_group" title="Symmetric group">symmetric group</a> and in <a href="http://en.wikipedia.org/wiki/Group_representation" title="Group representation">group representation theory</a> in general.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Examples"><span class="tocnumber">1</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Restricted_partitions"><span class="tocnumber">2</span> <span class="toctext">Restricted partitions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Partition_function"><span class="tocnumber">3</span> <span class="toctext">Partition function</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Generating_function"><span class="tocnumber">3.1</span> <span class="toctext">Generating function</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Gaussian_binomial_coefficient"><span class="tocnumber">3.1.1</span> <span class="toctext">Gaussian binomial coefficient</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Restricted_partition_generating_functions"><span class="tocnumber">3.1.2</span> <span class="toctext">Restricted partition generating functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Congruences"><span class="tocnumber">3.2</span> <span class="toctext">Congruences</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Partition_function_formulas"><span class="tocnumber">3.3</span> <span class="toctext">Partition function formulas</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Recurrence_formula"><span class="tocnumber">3.3.1</span> <span class="toctext">Recurrence formula</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Approximation_formulas"><span class="tocnumber">3.3.2</span> <span class="toctext">Approximation formulas</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Asymptotics_of_restricted_partitions"><span class="tocnumber">3.3.3</span> <span class="toctext">Asymptotics of restricted partitions</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Ferrers_diagram"><span class="tocnumber">4</span> <span class="toctext">Ferrers diagram</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Young_diagrams"><span class="tocnumber">5</span> <span class="toctext">Young diagrams</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Notes"><span class="tocnumber">7</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=1" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The seven partitions of 5 are:</p>
+<ul>
+<li>5</li>
+<li>4 + 1</li>
+<li>3 + 2</li>
+<li>3 + 1 + 1</li>
+<li>2 + 2 + 1</li>
+<li>2 + 1 + 1 + 1</li>
+<li>1 + 1 + 1 + 1 + 1</li>
+</ul>
+<p>In some sources partitions are treated as the sequence of summands, 
+rather than as an expression with plus signs. For example, the partition
+ 2&nbsp;+&nbsp;2&nbsp;+&nbsp;1 might instead be written as the tuple <span class="nowrap">(2, 2, 1)</span> or in the even more compact form <span class="nowrap">(2<sup>2</sup>, 1)</span> where the superscript indicates the number of repetitions of a term.</p>
+<h2><span class="mw-headline" id="Restricted_partitions">Restricted partitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=2" title="Edit section: Restricted partitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A restricted partition is a partition in which the parts are constrained in some way.</p>
+<p>For example, we could count partitions that contain only odd numbers.
+ Among the 22 partitions of the number 8, there are 6 that contain only <i>odd parts</i>:</p>
+<ul>
+<li>7 + 1</li>
+<li>5 + 3</li>
+<li>5 + 1 + 1 + 1</li>
+<li>3 + 3 + 1 + 1</li>
+<li>3 + 1 + 1 + 1 + 1 + 1</li>
+<li>1 + 1 + 1 + 1 + 1 + 1 + 1 + 1</li>
+</ul>
+<p>Alternatively, we could count partitions in which no number occurs more than once. If we count the partitions of 8 with <i>distinct parts</i>, we also obtain 6:</p>
+<ul>
+<li>8</li>
+<li>7 + 1</li>
+<li>6 + 2</li>
+<li>5 + 3</li>
+<li>5 + 2 + 1</li>
+<li>4 + 3 + 1</li>
+</ul>
+<p>For all positive numbers the number of partitions with odd parts 
+equals the number of partitions with distinct parts. This result was 
+proved by <a href="http://en.wikipedia.org/wiki/Leonhard_Euler" title="Leonhard Euler">Leonhard Euler</a> in 1748<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> and is a special case of <a href="http://en.wikipedia.org/wiki/Glaisher%27s_theorem" title="Glaisher's theorem">Glaisher's theorem</a>.</p>
+<p>Some similar results about restricted partitions can be obtained by the aid of a visual tool, a <b>Ferrers graph</b> (also called <b>Ferrers diagram</b>, since it is not a <i>graph</i> in the <a href="http://en.wikipedia.org/wiki/Graph_theory" title="Graph theory">graph-theoretical</a> sense, or sometimes <b>Young diagram</b>, alluding to the <a href="http://en.wikipedia.org/wiki/Young_tableau" title="Young tableau">Young tableau</a>).</p>
+<p>Some results concerning restricted partitions are:</p>
+<ul>
+<li>The number of partitions of <i>n</i> in which the greatest part is <i>m</i> is equal to the number of partitions of <i>n</i> into <i>m</i> parts.</li>
+<li>The number of partitions of <i>n</i> in which each part is less than or equal to <i>m</i> is equal to the number of partitions of <i>n</i> into <i>m</i> or fewer parts.</li>
+<li>The number of partitions of <i>n</i> in which all parts are equal is the number of <a href="http://en.wikipedia.org/wiki/Divisor" title="Divisor">divisors</a> of <i>n</i>.</li>
+<li>The number of partitions of <i>n</i> in which all parts are 1 or 2 (or, equivalently, the number of partitions of <i>n</i> into 1 or 2 parts) is</li>
+</ul>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt="\left \lfloor \frac {n}{2}+1 \right \rfloor \, ." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/31eac939c3159798e9d0a94a2e1438ae.png"></dd>
+</dl>
+</dd>
+</dl>
+<ul>
+<li>The number of partitions of <i>n</i> in which all parts are 1, 2 or 3 (or, equivalently, the number of partitions of <i>n</i> into 1, 2 or 3 parts) is the nearest integer to (<i>n</i> + 3)<sup>2</sup> / 12.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></li>
+</ul>
+<p>One class of restricted partition is specified by limiting the partitions to have at most <i>M</i> parts, each of size at most <i>N</i>. Let <i>p</i>(<i>N</i>,<i>M</i>;<i>n</i>) denote the number of such partitions of <i>n</i>. There is a recurrence relation</p>
+<dl>
+<dd><img class="tex" alt="p(N,M;n) = p(N,M-1;n) + p(N-1,M;n-M) \ " src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/81ddbb5e1264fbce4484575665533bb8.png"></dd>
+</dl>
+<p>obtained by observing that <img class="tex" alt="p(N,M;n) - p(N,M-1;n)" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/ac71a1b9087e707dfed00c6e7631616c.png"> counts the partitions of <i>n</i> into exactly <i>M</i> parts of size at most <i>N</i>, and subtracting 1 from each part of such a partitions yields a partition of <i>n</i>−<i>M</i>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Partition_function">Partition function</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=3" title="Edit section: Partition function">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="http://en.wikipedia.org/wiki/Number_theory" title="Number theory">number theory</a>, the <b>partition function</b> <i>p</i>(<i>n</i>) represents the <a href="http://en.wikipedia.org/wiki/Number" title="Number">number</a> of possible partitions of a natural number <i>n</i>, which is to say the number of distinct ways of representing <i>n</i> as a <a href="http://en.wikipedia.org/wiki/Sum" title="Sum" class="mw-redirect">sum</a> of natural numbers (with order irrelevant). By convention <i>p</i>(0) = 1, <i>p</i>(<i>n</i>) = 0 for <i>n</i> negative.</p>
+<p>The first few values of the partition function are (starting with <i>p</i>(0)=1):</p>
+<dl>
+<dd>1, 1, 2, 3, 5, 7, 11, 15, 22, 30, 42, … (sequence <span class="nowrap"><a href="http://oeis.org/A000041" class="extiw" title="oeis:A000041">A000041</a></span> in <a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="On-Line Encyclopedia of Integer Sequences">OEIS</a>).</dd>
+</dl>
+<p>The value of <i>p</i>(<i>n</i>) has been computed for large values of <i>n</i>, for example <i>p</i>(100)=190,569,292 and <i>p</i>(1000) is approximately 2.4<span style="margin:0 .15em 0 .25em">×</span>10<sup>31</sup>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>As of June 2013<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit">[update]</a></sup>, the largest known <a href="http://en.wikipedia.org/wiki/Prime_number" title="Prime number">prime number</a> that counts a number of partitions is <i>p</i>(120052058), with 12198 decimal digits.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>For every type of restricted partition there is a corresponding 
+function for the number of partitions satisfying the given restriction. 
+An important example is <i>q</i>(<i>n</i>), the number of partitions of <i>n</i> into distinct parts.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> As noted above, <i>q</i>(<i>n</i>) is also the number of partitions of <i>n</i> into odd parts. The first few values of <i>q</i>(<i>n</i>) are (starting with <i>q</i>(0)=1):</p>
+<dl>
+<dd>1, 1, 1, 2, 2, 3, 4, 5, 6, 8, 10, … (sequence <span class="nowrap"><a href="http://oeis.org/A000009" class="extiw" title="oeis:A000009">A000009</a></span> in <a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="On-Line Encyclopedia of Integer Sequences">OEIS</a>).</dd>
+</dl>
+<h3><span class="mw-headline" id="Generating_function">Generating function</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=4" title="Edit section: Generating function">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="http://en.wikipedia.org/wiki/Generating_function" title="Generating function">generating function</a> for <i>p</i>(<i>n</i>) is given by:<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="\sum_{n=0}^\infty p(n)x^n = \prod_{k=1}^\infty \left(\frac {1}{1-x^k} \right)." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/f667eb0488ccae6fcabb705e39df2eba.png"></dd>
+</dl>
+<p>Expanding each term on the right-hand side as a <a href="http://en.wikipedia.org/wiki/Geometric_series" title="Geometric series">geometric series</a>, we can rewrite it as</p>
+<dl>
+<dd>(1 + <i>x</i> + <i>x</i><sup>2</sup> + <i>x</i><sup>3</sup> + ...)(1 + <i>x</i><sup>2</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>6</sup> + ...)(1 + <i>x</i><sup>3</sup> + <i>x</i><sup>6</sup> + <i>x</i><sup>9</sup> + ...) ....</dd>
+</dl>
+<p>The <i>x</i><sup><i>n</i></sup> term in this product counts the number of ways to write</p>
+<dl>
+<dd><i>n</i> = <i>a</i><sub>1</sub> + 2<i>a</i><sub>2</sub> + 3<i>a</i><sub>3</sub> + ... = (1 + 1 + ... + 1) + (2 + 2 + ... + 2) + (3 + 3 + ... + 3) + ...,</dd>
+</dl>
+<p>where each number <i>i</i> appears <i>a</i><sub><i>i</i></sub> times. This is precisely the definition of a partition of <i>n</i>, so our product is the desired generating function. More generally, the generating function for the partitions of <i>n</i> into numbers from a set <i>A</i> can be found by taking only those terms in the product where <i>k</i> is an element of <i>A</i>. This result is due to <a href="http://en.wikipedia.org/wiki/Leonhard_Euler" title="Leonhard Euler">Euler</a>.</p>
+<p>The formulation of Euler's generating function is a special case of a <a href="http://en.wikipedia.org/wiki/Q-Pochhammer_symbol" title="Q-Pochhammer symbol">q-Pochhammer symbol</a> and is similar to the product formulation of many <a href="http://en.wikipedia.org/wiki/Modular_form" title="Modular form">modular forms</a>, and specifically the <a href="http://en.wikipedia.org/wiki/Dedekind_eta_function" title="Dedekind eta function">Dedekind eta function</a>.</p>
+<p>The denominator of the product is <a href="http://en.wikipedia.org/wiki/Euler%27s_function" title="Euler's function" class="mw-redirect">Euler's function</a> and can be written, by the <a href="http://en.wikipedia.org/wiki/Pentagonal_number_theorem" title="Pentagonal number theorem">pentagonal number theorem</a>, as</p>
+<dl>
+<dd><img class="tex" alt="(1-x)(1-x^2)(1-x^3) \dots = 1 - x - x^2 + x^5 + x^7 - x^{12} - x^{15} + x^{22} + x^{26} + \dots." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/fa2c0d7daea0329f4e9944c0fa1dabd2.png"></dd>
+</dl>
+<p>where the exponents of <i>x</i> on the right hand side are the <a href="http://en.wikipedia.org/wiki/Pentagonal_number" title="Pentagonal number">generalized pentagonal numbers</a>; i.e., numbers of the form ½<i>m</i>(3<i>m</i> − 1), where <i>m</i> is an integer. The signs in the summation alternate as (-1)<i><sup>m</sup></i>. This theorem can be used to derive a recurrence for the partition function:</p>
+<dl>
+<dd><i>p</i>(<i>k</i>) = <i>p</i>(<i>k</i> − 1) + <i>p</i>(<i>k</i> − 2) − <i>p</i>(<i>k</i> − 5) − <i>p</i>(<i>k</i> − 7) + <i>p</i>(<i>k</i> − 12) + <i>p</i>(<i>k</i> − 15) − <i>p</i>(<i>k</i> − 22) − ...</dd>
+</dl>
+<p>where p(0) is taken to equal 1, and p(k) is taken to be zero for negative k.</p>
+<p>Another way of stating this is that the value of <i>p(n)</i> can be found from the formula<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt=" \begin{matrix}  {\rm GPN's} \\ 0 \\1\\2\\~\\~\\5\\~\\ 7\\ ~ \\ ~\\ \vdots \\ ~ \\ ~   \end{matrix}  
+     ~~~    p(n) = \begin{vmatrix} ~~1 &amp; -1~ &amp; ~&amp; ~ &amp; ~ &amp;~&amp;~&amp;~ \\
+                                                         ~~1 &amp; ~1 &amp; -1~ &amp; ~ \\
+                                                         ~~0 &amp; ~1 &amp; ~1  &amp; -1~ &amp; ~ \\
+                                                         ~~0 &amp; ~0 &amp; ~1 &amp; ~1 &amp;-1~ &amp; ~ \\
+                                                          -1 &amp;~0 &amp; ~0 &amp; ~1 &amp; ~1 &amp;-1~ &amp; ~  \\
+                                                         ~~0 &amp; -1~ &amp; ~0 &amp; ~0  &amp; ~1 &amp; ~1 &amp; -1~ &amp; ~ \\
+                                                           -1 &amp; ~0&amp; -1~ &amp; ~0 &amp; ~0  &amp; ~1 &amp; ~1 &amp; -1~ &amp;~ \\ 
+                                                         ~~0 &amp; -1~ &amp;~0&amp; -1~ &amp; ~0 &amp; ~0  &amp; ~1 &amp; ~1 &amp; -1~ &amp;~ \\
+                                                         ~~0 &amp; ~0 &amp; -1~ &amp;~0&amp; -1~ &amp; ~0 &amp; ~0  &amp; ~1 &amp; ~1 &amp; ~ \\ 
+                                                           ~~ \vdots &amp; ~ &amp; ~ &amp; ~ &amp; ~ &amp; ~ &amp;~ &amp; ~ &amp; ~ &amp;  \ddots   \\ 
+\end{vmatrix} _{ n \times n} ." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/c59be0ee94eaa4fa7b55ac3a8587dea3.png"></dd>
+</dl>
+<p>I.e., <i>p</i>(<i>n</i>) is the <a href="http://en.wikipedia.org/wiki/Determinant" title="Determinant">determinant</a> of the <i>n</i>×<i>n</i> truncation of the infinite-dimensional <a href="http://en.wikipedia.org/wiki/Toeplitz_matrix" title="Toeplitz matrix">Toeplitz matrix</a> shown above. The only non-zero diagonals of this matrix start on a row labeled by a generalized pentagonal number <i>q<sub>m</sub></i>. (The superdiagonal is taken to start on row "0".) On these diagonals, the matrix element is <i>(-1)<sup>m+1</sup></i>. This follows from a general formula for the quotients for power series.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup></p>
+<p>The <a href="http://en.wikipedia.org/wiki/Generating_function" title="Generating function">generating function</a> for <i>q</i>(<i>n</i>) (partitions into distinct parts) is given by:<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="\sum_{n=0}^\infty q(n)x^n = \prod_{k=1}^\infty (1+x^k) = \prod_{k=1}^\infty \left(\frac {1}{1-x^{2k-1}} \right)." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/f0d10236c22b2afb5475f2e38d100d93.png"></dd>
+</dl>
+<p>The second product can be written ϕ(<i>x</i><sup>2</sup>) / ϕ(<i>x</i>) where ϕ is Euler's function; the pentagonal number theorem can be applied to this as well giving a recurrence for <i>q</i>:<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></p>
+<dl>
+<dd><i>q</i>(<i>k</i>) = <i>a</i><sub><i>k</i></sub>+<i>q</i>(<i>k</i> − 1) + <i>q</i>(<i>k</i> − 2) − <i>q</i>(<i>k</i> − 5) − <i>q</i>(<i>k</i> − 7) + <i>q</i>(<i>k</i> − 12) + <i>q</i>(<i>k</i> − 15) − <i>q</i>(<i>k</i> − 22) − ...</dd>
+</dl>
+<p>where <i>a</i><sub><i>k</i></sub> is (−1)<sup><i>m</i></sup> if <i>k</i> =3<i>m</i><sup>2</sup>-<i>m</i> for some integer <i>m</i> and is 0 otherwise.</p>
+<p>The determinant formula for the quotient of power series can be applied to the expression ϕ(<i>x</i><sup>2</sup>) / ϕ(<i>x</i>) to produce the expression</p>
+<dl>
+<dd><img class="tex" alt="q(n) = \begin{vmatrix}   ~1&amp; ~ &amp; ~&amp;~&amp;~&amp;~&amp;~&amp;~&amp;~1~\\
+                                                             -1&amp; ~1&amp; ~ &amp; ~&amp;~&amp;~&amp;~&amp;~&amp;~0~\\
+                                                             -1&amp; -1&amp; ~1&amp; ~ &amp; ~&amp;~&amp;~&amp;~&amp;-1~\\
+                                                             ~0&amp; -1&amp; -1&amp; ~1 &amp; ~ &amp; ~&amp;~&amp;~&amp;~0~\\
+                                                             ~0 &amp; ~0 &amp; -1&amp; -1&amp;~1 &amp; ~&amp;~&amp;~&amp;-1~\\
+                                                             ~1&amp; ~0 &amp; ~0&amp; -1&amp;   -1&amp;~1&amp;~&amp;~&amp; ~0~\\
+                                                             ~0 &amp;  ~1&amp; ~0 &amp; ~0&amp; -1&amp; -1&amp;~1 &amp;  ~ &amp;~0~\\
+                                                             ~1 &amp;  ~0&amp; ~1 &amp; ~0&amp;~0&amp; -1&amp; -1 &amp;~&amp;~0~\\   
+                                                            ~ \vdots &amp; ~&amp;~&amp;~&amp;~&amp;~&amp; ~&amp; \ddots &amp;  ~\vdots~ \end{vmatrix}_{(n+1) \times (n+1)} ," src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/1a8460b2df1ca02b9308aa48233bca41.png"></dd>
+</dl>
+<p>where the diagonals in the first <i>n</i> columns are constants equal to the coefficients in the power series for ϕ(<i>x</i>) and the last column has values a<sub>k</sub> given above.</p>
+<h4><span class="mw-headline" id="Gaussian_binomial_coefficient">Gaussian binomial coefficient</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=5" title="Edit section: Gaussian binomial coefficient">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Gaussian_binomial_coefficient" title="Gaussian binomial coefficient">Gaussian binomial coefficient</a></div>
+<p>The <a href="http://en.wikipedia.org/wiki/Gaussian_binomial_coefficient" title="Gaussian binomial coefficient">Gaussian binomial coefficient</a> is related to integer partitions. The <a href="http://en.wikipedia.org/wiki/Gaussian_binomial_coefficient" title="Gaussian binomial coefficient">Gaussian binomial coefficient</a> is defined as:</p>
+<dl>
+<dd><img class="tex" alt="{k+\ell \choose \ell}_q = {k+\ell \choose k}_q = \frac{\prod^{k+\ell}_{j=1}(1-q^j)}{\prod^{k}_{j=1}(1-q^j)\prod^{\ell}_{j=1}(1-q^j)}." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/3d3350e726170fb1673e293e50b481e8.png"></dd>
+</dl>
+<p>The number of integer partitions that would fit into a <i>k</i> by <i>l</i> rectangle (when expressed as a Ferrers or Young diagram) is denoted by <i>p</i>(<i>n</i>, <i>k</i>, <i>l</i>). The <a href="http://en.wikipedia.org/wiki/Gaussian_binomial_coefficient" title="Gaussian binomial coefficient">Gaussian binomial coefficient</a> is related to the <a href="http://en.wikipedia.org/wiki/Generating_function" title="Generating function">generating function</a> of <i>p</i>(<i>n</i>, <i>k</i>, <i>l</i>) by the following equality:</p>
+<dl>
+<dd><img class="tex" alt="\sum^{k\ell}_{n=0}p(n,k,\ell)x^n = {k+\ell \choose \ell}_x. " src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/9790a210baed41051121f19cf983c044.png"></dd>
+</dl>
+<h4><span class="mw-headline" id="Restricted_partition_generating_functions">Restricted partition generating functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=6" title="Edit section: Restricted partition generating functions">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The <a href="http://en.wikipedia.org/wiki/Generating_function" title="Generating function">generating function</a> can be adapted to describe <a href="#Restricted_partitions">restricted partitions</a>. For example, the <a href="http://en.wikipedia.org/wiki/Generating_function" title="Generating function">generating function</a> for integer partitions into distinct parts is:<sup id="cite_ref-HW365_12-0" class="reference"><a href="#cite_note-HW365-12"><span>[</span>12<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="\prod^{\infty}_{n=1}(1+x^n)" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/2f6db7d83b8f852db32fb5759c4e7855.png"></dd>
+</dl>
+<p>and the <a href="http://en.wikipedia.org/wiki/Generating_function" title="Generating function">generating function</a> for partitions consisting of particular summands (specified by a set <i>T</i> of <a href="http://en.wikipedia.org/wiki/Natural_number" title="Natural number">natural numbers</a>) is:</p>
+<dl>
+<dd><img class="tex" alt="\prod_{t \in T}(1-x^t)^{-1}." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/70b8cf28199c7eaa8b67e03c5b6f1b6b.png"></dd>
+</dl>
+<p>This can be used to solve <a href="http://en.wikipedia.org/wiki/Change-making_problem" title="Change-making problem">Change-making problems</a> (where the set <i>T</i> specifies the available coins). <a href="http://en.wikipedia.org/wiki/Generating_function" title="Generating function">Generating functions</a> can be used to prove various identities involving integer partitions quite easily, for example the one mentioned in the <a href="#Restricted_partitions">Restricted partitions</a> section. The generating function for partitions into odd summands is:<sup id="cite_ref-HW365_12-1" class="reference"><a href="#cite_note-HW365-12"><span>[</span>12<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="\prod^{\infty}_{\begin{smallmatrix} n = 1 \\ n \mbox{ odd} \end{smallmatrix}}(1-x^n)^{-1} = \frac{1}{(1-x)(1-x^3)(1-x^5)...} = \frac{(1-x^2)(1-x^4)...}{(1-x)(1-x^2)(1-x^3)(1-x^4)(1-x^5)...}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/563223f2d7399dad447b0e76d517b917.png">
+<dl>
+<dd>
+<dl>
+<dd>
+<dl>
+<dd>
+<dl>
+<dd>
+<dl>
+<dd>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt=" = \frac{(1-x)(1+x)(1-x^2)(1+x^2)...}{(1-x)(1-x^2)(1-x^3)(1-x^4)(1-x^5)...} = (1+x)(1+x^2)(1+x^3)... " src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/57af9a667ee18ad8fbb671b0792937eb.png"></dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>which is the generating function for partitions into distinct summands.</p>
+<p>The generating function for <i>p</i>(<i>N</i>,<i>M</i>;<i>n</i>) is a polynomial of degree <i>NM</i>: it is the <a href="http://en.wikipedia.org/wiki/Gaussian_polynomial" title="Gaussian polynomial" class="mw-redirect">Gaussian polynomial</a> <img class="tex" alt="{M+N \choose M}_x" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/c52b926be68c93f3099c8fccf2e45a10.png"> where<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="{m \choose r}_q
+= \begin{cases}
+\frac{(1-q^m)(1-q^{m-1})\cdots(1-q^{m-r+1})} {(1-q)(1-q^2)\cdots(1-q^r)} &amp; r \le m \\
+0 &amp; r&gt;m \end{cases}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/30b31fe9c8035781494a8dc70ff03b71.png"></dd>
+</dl>
+<h3><span class="mw-headline" id="Congruences">Congruences</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=7" title="Edit section: Congruences">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Ramanujan%27s_congruences" title="Ramanujan's congruences">Ramanujan's congruences</a></div>
+<p><a href="http://en.wikipedia.org/wiki/Srinivasa_Ramanujan" title="Srinivasa Ramanujan">Srinivasa Ramanujan</a>
+ is credited with discovering that "congruences" in the number of 
+partitions exist for arguments that are integers ending in 4 and 9.<sup id="cite_ref-HWT359_14-0" class="reference"><a href="#cite_note-HWT359-14"><span>[</span>14<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="p(5k+4)\equiv 0 \pmod 5\," src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/67381b7463e196b46c91e559c6e045dc.png"></dd>
+</dl>
+<p>For instance, the number of partitions for the integer 4 is 5. For 
+the integer 9, the number of partitions is 30; for 14 there are 135 
+partitions. This is implied by an identity, also by Ramanujan,<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="  \sum_{k=0}^{\infty} p(5k+4)x^k = 5~ \frac{ (x^5)^5_{\infty} } {(x)^6_{\infty}}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/a1c279f92a72d6d4a7075630e700ae02.png"></dd>
+</dl>
+<p>where the series <img class="tex" alt="(x)_{\infty}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/5d80646e104f5c2e302f0a44c4283834.png"> is defined as</p>
+<dl>
+<dd><img class="tex" alt="(x)_{\infty} = \prod_{m=1}^{\infty}(1-x^m)." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/dff12481e61116f009ec28dc25ceee1b.png"></dd>
+</dl>
+<p>He also discovered congruences related to 7 and 11:<sup id="cite_ref-HWT3601_16-0" class="reference"><a href="#cite_note-HWT3601-16"><span>[</span>16<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="\begin{align}
+ p(7k + 5) &amp;\equiv 0 \pmod 7\\
+ p(11k + 6) &amp;\equiv 0 \pmod {11}.
+\end{align}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/dbc69ffb34300064d7c4caab4fa830a9.png"></dd>
+</dl>
+<p>and for p=7 prove similar as above relation</p>
+<dl>
+<dd><img class="tex" alt="
+  \sum_{k=0}^{\infty} p(7k+5)x^k =
+   7~ \frac{ (x^7)^3_{\infty} } {(x)^4_{\infty}}
+   +49 ~ \frac{ (x^7)^7_{\infty} } {(x)^8_{\infty}}
+" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/b7f636c1def4dc608721ebcf0f4c1e1f.png"></dd>
+</dl>
+<p>Since 5, 7, and 11 are consecutive <a href="http://en.wikipedia.org/wiki/Prime_number" title="Prime number">primes</a>, one might think that there would be such a congruence for the next prime 13, <img class="tex" alt="\scriptstyle p(13k \,+\, a) \;\equiv\; 0 \pmod{13}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/a3a38d28b9e24d617cc4724eb831a05a.png"> for some <i>a</i>. This is, however, false. It can also be shown that there is no congruence of the form <img class="tex" alt="\scriptstyle p(bk \,+\, a) \;\equiv\; 0 \pmod{b}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/a68ee8da36719e99bd13109c3cfa3288.png"> for any prime <i>b</i> other than 5, 7, or 11.</p>
+<p>In the 1960s, <a href="http://en.wikipedia.org/wiki/A._O._L._Atkin" title="A. O. L. Atkin">A. O. L. Atkin</a> of the <a href="http://en.wikipedia.org/wiki/University_of_Illinois_at_Chicago" title="University of Illinois at Chicago">University of Illinois at Chicago</a> discovered additional congruences for small prime moduli. For example:</p>
+<dl>
+<dd><img class="tex" alt="p(11^3 \cdot 13 \cdot k + 237)\equiv 0 \pmod {13}." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/9492c612ed1a9077828132c5ed4c228f.png"></dd>
+</dl>
+<p>In 2000, <a href="http://en.wikipedia.org/wiki/Ken_Ono" title="Ken Ono">Ken Ono</a> of the <a href="http://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison" title="University of Wisconsin–Madison">University of Wisconsin–Madison</a> proved that there are such congruences for every prime modulus. A few years later Ono, together with <a href="http://en.wikipedia.org/w/index.php?title=Scott_Ahlgren&amp;action=edit&amp;redlink=1" class="new" title="Scott Ahlgren (page does not exist)">Scott Ahlgren</a> of the University of Illinois, proved that there are partition congruences modulo every integer coprime to 6.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Partition_function_formulas">Partition function formulas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=8" title="Edit section: Partition function formulas">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Recurrence_formula">Recurrence formula</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=9" title="Edit section: Recurrence formula">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Pentagonal_number_theorem" title="Pentagonal number theorem">pentagonal number theorem</a></div>
+<p><a href="http://en.wikipedia.org/wiki/Leonhard_Euler" title="Leonhard Euler">Leonhard Euler</a>'s <a href="http://en.wikipedia.org/wiki/Pentagonal_number_theorem" title="Pentagonal number theorem">pentagonal number theorem</a> implies the identity</p>
+<dl>
+<dd><img class="tex" alt="p(n)=p(n-1)+p(n-2)-p(n-5)-p(n-7)+\cdots" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/43ece82da690519129ca823eb824f391.png"></dd>
+</dl>
+<p>where the numbers 1, 2, 5, 7, ... that appear on the right side of the equation are the generalized pentagonal numbers <img class="tex" alt="g_k  = \frac{k(3k -1)}{2}" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/cda291a091870cd70e74acc97bc407b3.png"> for nonzero integers <i>k</i>. More formally,</p>
+<dl>
+<dd><img class="tex" alt="p(n)=\sum_k (-1)^{k-1}p\left(n- k(3k -1)/2\right)" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/85d2425090db971709020599b2e5ff0e.png"></dd>
+</dl>
+<p>where the summation is over all nonzero integers <i>k</i> (positive and negative) and <i>p</i>(<i>m</i>) is taken to be 0 if <i>m</i> &lt; 0.</p>
+<h4><span class="mw-headline" id="Approximation_formulas">Approximation formulas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=10" title="Edit section: Approximation formulas">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Approximation formulas exist that are faster to calculate than the exact formula given above.</p>
+<p>An <a href="http://en.wikipedia.org/wiki/Asymptotic_analysis" title="Asymptotic analysis">asymptotic</a> expression for <i>p</i>(<i>n</i>) is given by</p>
+<dl>
+<dd><img class="tex" alt="p(n) \sim \frac {1} {4n\sqrt3} \exp\left({\pi \sqrt {\frac{2n}{3}}}\right) \mbox { as } n\rightarrow \infty." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/052a3ebff27959076525271b3439fbb2.png"></dd>
+</dl>
+<p>This <a href="http://en.wikipedia.org/wiki/Asymptotic_formula" title="Asymptotic formula">asymptotic formula</a> was first obtained by <a href="http://en.wikipedia.org/wiki/G._H._Hardy" title="G. H. Hardy">G. H. Hardy</a> and <a href="http://en.wikipedia.org/wiki/Ramanujan" title="Ramanujan" class="mw-redirect">Ramanujan</a> in 1918 and independently by <a href="http://en.wikipedia.org/wiki/J._V._Uspensky" title="J. V. Uspensky">J. V. Uspensky</a> in 1920. Considering <i>p</i>(1000), the asymptotic formula gives about 2.4402&nbsp;×&nbsp;10<sup>31</sup>, reasonably close to the exact answer given above (1.415% larger than the true value).</p>
+<p>Hardy and Ramanujan obtained an <a href="http://en.wikipedia.org/wiki/Asymptotic_expansion" title="Asymptotic expansion">asymptotic expansion</a> with this approximation as the first term:</p>
+<dl>
+<dd><img class="tex" alt="p(n)=\frac{1}{2 \sqrt{2}} \sum_{k=1}^v \sqrt{k}\, A_k(n)\,
+\frac{d}{dn} \exp \left({ \pi\sqrt{\frac23} 
+    \frac{\sqrt{n-\frac{1}{24}}}{k} }
+    \right)
+" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/da554a6eb109d23e8684190e184121ac.png"></dd>
+</dl>
+<p>where</p>
+<dl>
+<dd><img class="tex" alt="A_k(n) = \sum_{0 \,\le\, m \,&lt;\, k; \; (m,\, k) \,=\, 1}
+e^{ \pi i \left[ s(m,\, k) \;-\; \frac{1}{k} 2 nm \right] }." src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/15bef4db1dce13351660c67f8059e8fa.png"></dd>
+</dl>
+<p>Here, the notation (<i>m</i>,&nbsp;<i>n</i>)&nbsp;=&nbsp;1 implies that the sum should occur only over the values of <i>m</i> that are <a href="http://en.wikipedia.org/wiki/Relatively_prime" title="Relatively prime" class="mw-redirect">relatively prime</a> to <i>n</i>. The function <i>s</i>(<i>m</i>,&nbsp;<i>k</i>) is a <a href="http://en.wikipedia.org/wiki/Dedekind_sum" title="Dedekind sum">Dedekind sum</a>.</p>
+<p>The error after <i>v</i> terms is of the order of the next term, and <i>v</i> may be taken to be of the order of <img class="tex" alt="\sqrt n" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/33f89d8758a725273b6b80612bb65276.png">. As an example, Hardy and Ramanujan showed that <i>p</i>(200) is the nearest integer to the sum of the first <i>v</i>=5 terms of the series.</p>
+<p>In 1937, <a href="http://en.wikipedia.org/wiki/Hans_Rademacher" title="Hans Rademacher">Hans Rademacher</a> was able to improve on Hardy and Ramanujan's results by providing a <a href="http://en.wikipedia.org/wiki/Convergent_series" title="Convergent series">convergent series</a> expression for <i>p</i>(<i>n</i>). It is<sup id="cite_ref-And69_18-0" class="reference"><a href="#cite_note-And69-18"><span>[</span>18<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt="p(n)=\frac{1}{\pi \sqrt{2}} \sum_{k=1}^\infty \sqrt{k}\, A_k(n)\,
+\frac{d}{dn} \left({
+    \frac {1} {\sqrt{n-\frac{1}{24}}}
+    \sinh \left[ {\frac{\pi}{k}
+    \sqrt{\frac{2}{3}\left(n-\frac{1}{24}\right)}}\right]
+}\right) .
+" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/35dd2572c02024c6ef2767567c153453.png"></dd>
+</dl>
+<p>The proof of Rademacher's formula involves <a href="http://en.wikipedia.org/wiki/Ford_circle" title="Ford circle">Ford circles</a>, <a href="http://en.wikipedia.org/wiki/Farey_sequence" title="Farey sequence">Farey sequences</a>, <a href="http://en.wikipedia.org/wiki/Modular_group" title="Modular group">modular symmetry</a> and the <a href="http://en.wikipedia.org/wiki/Dedekind_eta_function" title="Dedekind eta function">Dedekind eta function</a> in a central way.</p>
+<p>It may be shown that the <i>k</i>-th term of Rademacher's series is of the order</p>
+<dl>
+<dd><img class="tex" alt="\exp\left(\pi\sqrt\frac23 \frac{\sqrt n}{k} \right) , " src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/2f50a6d881394955bc958dc5af226ba3.png"></dd>
+</dl>
+<p>so that the first term gives the Hardy–Ramanujan asymptotic approximation.</p>
+<p><a href="http://en.wikipedia.org/wiki/Paul_Erd%C5%91s" title="Paul Erdős">Paul Erdős</a> published an elementary proof of the asymptotic formula for <i>p</i>(<i>n</i>) in 1942.<sup id="cite_ref-erdos42_19-0" class="reference"><a href="#cite_note-erdos42-19"><span>[</span>19<span>]</span></a></sup><sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup></p>
+<p>Techniques for implementing the Hardy-Ramanujan-Rademacher formula efficiently on a computer are discussed in,<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup> where it is shown that <i>p</i>(<i>n</i>) can be computed in softly optimal time <i>O</i>(<i>n</i><sup>1/2+ε</sup>). The largest value of the partition function computed exactly is p(10<sup>20</sup>), which has slightly more than 11 billion digits.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>22<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="Asymptotics_of_restricted_partitions">Asymptotics of restricted partitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=11" title="Edit section: Asymptotics of restricted partitions">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The asymptotic expression for <i>p</i>(<i>n</i>) implies that</p>
+<dl>
+<dd><img class="tex" alt=" \log p(n) \sim C \sqrt n \mbox { as } n\rightarrow \infty" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/855ce47c435476b511b2d7cdac49b870.png"></dd>
+</dl>
+<p>where <img class="tex" alt="C = \pi\sqrt\frac23" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/7491a1d86c956ce9ac69ad89d35287cb.png">.<sup id="cite_ref-And7097_23-0" class="reference"><a href="#cite_note-And7097-23"><span>[</span>23<span>]</span></a></sup></p>
+<p>If <i>A</i> is a set of natural numbers, we let <i>p</i><sub><i>A</i></sub>(<i>n</i>) denote the number of partitions of <i>n</i> into elements of <i>A</i>. If <i>A</i> possesses positive <a href="http://en.wikipedia.org/wiki/Natural_density" title="Natural density">natural density</a> α then</p>
+<dl>
+<dd><img class="tex" alt=" \log p_A(n) \sim C \sqrt{\alpha n}  " src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/4ed19b3eed57c78b535bf35ff66c0fb5.png"></dd>
+</dl>
+<p>and conversely if this asymptotic property holds for <i>p</i><sub><i>A</i></sub>(<i>n</i>) then <i>A</i> has natural density α.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24"><span>[</span>24<span>]</span></a></sup> This result was stated, with a sketch of proof, by Erdős in 1942.<sup id="cite_ref-erdos42_19-1" class="reference"><a href="#cite_note-erdos42-19"><span>[</span>19<span>]</span></a></sup><sup id="cite_ref-Nat495_25-0" class="reference"><a href="#cite_note-Nat495-25"><span>[</span>25<span>]</span></a></sup></p>
+<p>If <i>A</i> is a finite set, this analysis does not apply (the density of a finite set is zero). If <i>A</i> has <i>k</i> elements then<sup id="cite_ref-26" class="reference"><a href="#cite_note-26"><span>[</span>26<span>]</span></a></sup></p>
+<dl>
+<dd><img class="tex" alt=" p_A(n) = \left(\prod_{a \in A} a^{-1}\right) \cdot \frac{n^{k-1}}{(k-1)!} + O(n^{k-2}) . " src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/86ffd071640d2f6678bf44f7e6a57049.png"></dd>
+</dl>
+<h2><span class="mw-headline" id="Ferrers_diagram">Ferrers diagram</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=12" title="Edit section: Ferrers diagram">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The partition 6&nbsp;+&nbsp;4&nbsp;+&nbsp;3&nbsp;+&nbsp;1 of the 
+positive number 14 can be represented by the following diagram; these 
+diagrams are named in honor of <a href="http://en.wikipedia.org/wiki/Norman_Macleod_Ferrers" title="Norman Macleod Ferrers">Norman Macleod Ferrers</a>:</p>
+<table>
+<tbody><tr style="vertical-align:top; text-align:left;">
+<td><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+</tr>
+<tr style="vertical-align:top; text-align:center;">
+<td>6 + 4 + 3 + 1</td>
+</tr>
+</tbody></table>
+<p>The 14 circles are lined up in 4 columns, each having the size of a 
+part of the partition. The diagrams for the 5 partitions of the number 4
+ are listed below:</p>
+<table>
+<tbody><tr style="vertical-align:top; text-align:left;">
+<td><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+<td></td>
+<td><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+<td></td>
+<td><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+<td></td>
+<td><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+<td></td>
+<td><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+</tr>
+<tr style="vertical-align:top; text-align:center;">
+<td>4</td>
+<td>=</td>
+<td>3 + 1</td>
+<td>=</td>
+<td>2 + 2</td>
+<td>=</td>
+<td>2 + 1 + 1</td>
+<td>=</td>
+<td>1 + 1 + 1 + 1</td>
+</tr>
+</tbody></table>
+<p>If we now flip the diagram of the partition 6 + 4 + 3 + 1 along its main diagonal, we obtain another partition of 14:</p>
+<table>
+<tbody><tr style="vertical-align:top; text-align:left;">
+<td><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+<td style="vertical-align:middle;">↔</td>
+<td><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+</tr>
+<tr style="vertical-align:top; text-align:center;">
+<td>6 + 4 + 3 + 1</td>
+<td>=</td>
+<td>4 + 3 + 3 + 2 + 1 + 1</td>
+</tr>
+</tbody></table>
+<p>By turning the rows into columns, we obtain the partition 
+4&nbsp;+&nbsp;3&nbsp;+&nbsp;3&nbsp;+&nbsp;2&nbsp;+&nbsp;1&nbsp;+&nbsp;1 
+of the number 14. Such partitions are said to be <i>conjugate</i> of one another.<sup id="cite_ref-HW362_27-0" class="reference"><a href="#cite_note-HW362-27"><span>[</span>27<span>]</span></a></sup>
+ In the case of the number 4, partitions 4 and 
+1&nbsp;+&nbsp;1&nbsp;+&nbsp;1&nbsp;+&nbsp;1 are conjugate pairs, and 
+partitions 3&nbsp;+&nbsp;1 and 2&nbsp;+&nbsp;1&nbsp;+&nbsp;1 are 
+conjugate of each other. Of particular interest is the partition 
+2&nbsp;+&nbsp;2, which has itself as conjugate. Such a partition is said
+ to be <i>self-conjugate</i>.<sup id="cite_ref-HW368_28-0" class="reference"><a href="#cite_note-HW368-28"><span>[</span>28<span>]</span></a></sup></p>
+<p><b>Claim</b>: The number of self-conjugate partitions is the same as the number of partitions with distinct odd parts.</p>
+<p><b>Proof (outline)</b>: The crucial observation is that every odd part can be "<i>folded</i>" in the middle to form a self-conjugate diagram:</p>
+<table>
+<tbody><tr>
+<td style="vertical-align:bottom;"><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+<td style="vertical-align:middle;">↔</td>
+<td style="vertical-align:bottom;"><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+</tr>
+</tbody></table>
+<p>One can then obtain a bijection between the set of partitions with 
+distinct odd parts and the set of self-conjugate partitions, as 
+illustrated by the following example:</p>
+<table>
+<tbody><tr>
+<td valign="top"><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:BlackDot.svg" class="image" title="x"><img alt="x" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-BlackDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/24px-BlackDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/32px-BlackDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:BlackDot.svg" class="image" title="x"><img alt="x" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-BlackDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/24px-BlackDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/32px-BlackDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:BlackDot.svg" class="image" title="x"><img alt="x" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-BlackDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/24px-BlackDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/32px-BlackDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+<td style="vertical-align:middle;">↔</td>
+<td valign="top"><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:BlackDot.svg" class="image" title="x"><img alt="x" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-BlackDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/24px-BlackDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/32px-BlackDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:BlackDot.svg" class="image" title="x"><img alt="x" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-BlackDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/24px-BlackDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/32px-BlackDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:BlackDot.svg" class="image" title="x"><img alt="x" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-BlackDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/24px-BlackDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/BlackDot.svg/32px-BlackDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="o"><img alt="o" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:RedDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-RedDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/24px-RedDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/RedDot.svg/32px-RedDot.svg.png 2x" height="16" width="16"></a></td>
+</tr>
+<tr style="vertical-align:top; text-align:center;">
+<td>9 + 7 + 3</td>
+<td>=</td>
+<td>5 + 5 + 4 + 3 + 2</td>
+</tr>
+<tr style="vertical-align:top; text-align:center;">
+<td>Dist. odd</td>
+<td></td>
+<td>self-conjugate</td>
+</tr>
+</tbody></table>
+<p>Similar techniques can be employed to establish, for example, the following equalities:</p>
+<ul>
+<li>The number of partitions of <i>n</i> into no more than <i>k</i> parts is the same as the number of partitions of <i>n</i> into parts no larger than&nbsp;<i>k</i>.</li>
+<li>The number of partitions of <i>n</i> into no more than <i>k</i> parts is the same as the number of partitions of <i>n</i>&nbsp;+&nbsp;<i>k</i> into exactly <i>k</i> parts.</li>
+</ul>
+<h2><span class="mw-headline" id="Young_diagrams">Young diagrams</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=13" title="Edit section: Young diagrams">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Young_diagram" title="Young diagram" class="mw-redirect">Young diagram</a></div>
+<p>An alternative visual representation of an integer partition is its <i>Young diagram</i>, named after the British mathematician <a href="http://en.wikipedia.org/wiki/Alfred_Young" title="Alfred Young">Alfred Young</a>.
+ Rather than representing a partition with dots, as in the Ferrers 
+diagram, the Young diagram uses boxes. Thus, the Young diagram for the 
+partition 5 + 4 + 1 is</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:102px;"><a href="http://en.wikipedia.org/wiki/File:Young_diagram_for_541_partition.svg" class="image"><img alt="Young diagram for 541 partition.svg" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/100px-Young_diagram_for_541_partition.png" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Young_diagram_for_541_partition.svg/150px-Young_diagram_for_541_partition.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Young_diagram_for_541_partition.svg/200px-Young_diagram_for_541_partition.svg.png 2x" height="60" width="100"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Young_diagram_for_541_partition.svg" class="internal" title="Enlarge"><img src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" alt="" height="11" width="15"></a></div>
+</div>
+</div>
+</div>
+</div>
+<p>while the Ferrers diagram for the same partition is</p>
+<dl>
+<dd>
+<dl>
+<dd>
+<table>
+<tbody><tr style="vertical-align:top; text-align:left;">
+<td><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a><br>
+<a href="http://en.wikipedia.org/wiki/File:GrayDot.svg" class="image" title="*"><img alt="*" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-GrayDot.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/24px-GrayDot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/GrayDot.svg/32px-GrayDot.svg.png 2x" height="16" width="16"></a></td>
+</tr>
+</tbody></table>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>While this seemingly trivial variation doesn't appear worthy of 
+separate mention, Young diagrams turn out to be extremely useful in the 
+study of <a href="http://en.wikipedia.org/wiki/Symmetric_functions" title="Symmetric functions" class="mw-redirect">symmetric functions</a> and <a href="http://en.wikipedia.org/wiki/Group_representation_theory" title="Group representation theory" class="mw-redirect">group representation theory</a>:
+ in particular, filling the boxes of Young diagrams with numbers (or 
+sometimes more complicated objects) obeying various rules leads to a 
+family of objects called <a href="http://en.wikipedia.org/wiki/Young_tableaux" title="Young tableaux" class="mw-redirect">Young tableaux</a>, and these tableaux have combinatorial and representation-theoretic significance.<sup id="cite_ref-And199_29-0" class="reference"><a href="#cite_note-And199-29"><span>[</span>29<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=14" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/30px-Commons-logo.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" height="40" width="30"></td>
+<td class="mbox-text plainlist" style="">Wikimedia Commons has media related to <i><b><a href="http://commons.wikimedia.org/wiki/Category:Integer_partitions" class="extiw" title="commons:Category:Integer partitions">Integer partitions</a></b></i>.</td>
+</tr>
+</tbody></table>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Rank_of_a_partition" title="Rank of a partition">Rank of a partition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Crank_of_a_partition" title="Crank of a partition">Crank of a partition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Young%27s_lattice" title="Young's lattice">Young's lattice</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dominance_order" title="Dominance order">Dominance order</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Partition_of_a_set" title="Partition of a set">Partition of a set</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stars_and_bars_%28combinatorics%29" title="Stars and bars (combinatorics)">Stars and bars (combinatorics)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Plane_partition" title="Plane partition">Plane partition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Polite_number" title="Polite number">Polite number</a>, defined by partitions into consecutive integers</li>
+<li><a href="http://en.wikipedia.org/wiki/Multiplicative_partition" title="Multiplicative partition">Multiplicative partition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Twelvefold_way" title="Twelvefold way">Twelvefold way</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ewens%27s_sampling_formula" title="Ewens's sampling formula">Ewens's sampling formula</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fa%C3%A0_di_Bruno%27s_formula" title="Faà di Bruno's formula">Faà di Bruno's formula</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multipartition" title="Multipartition">Multipartition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multiset" title="Multiset">Multiset</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Newton%27s_identities" title="Newton's identities">Newton's identities</a></li>
+<li><a href="http://en.wikipedia.org/wiki/File:Integer_Partition_Table.png" title="File:Integer Partition Table.png">Leibniz's distribution table for integer partitions</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Durfee_square" title="Durfee square">Durfee square</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Spt_function" title="Spt function">Smallest-parts function</a></li>
+<li>A Goldbach partition is the partition of an even number into primes (see <a href="http://en.wikipedia.org/wiki/Goldbach%27s_conjecture" title="Goldbach's conjecture">Goldbach's conjecture</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Kostant%27s_partition_function" title="Kostant's partition function" class="mw-redirect">Kostant's partition function</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=15" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a href="http://en.wikipedia.org/wiki/George_Andrews_%28mathematician%29" title="George Andrews (mathematician)">Andrews, George E.</a> <i>Number Theory</i>. W. B. Saunders Company, Philadelphia, 1971. Dover edition, page 149–150.</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Hardy, G.H. <i>Some Famous Problems of the Theory of Numbers</i>. Clarendon Press, 1920.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Andrews (1976) pp.33-34</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">"<a rel="nofollow" class="external text" href="http://oeis.org/A070177">Sloane's A070177</a> ", <i>The <a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="On-Line Encyclopedia of Integer Sequences">On-Line Encyclopedia of Integer Sequences</a></i>. OEIS Foundation.</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://primes.utm.edu/top20/page.php?id=54">http://primes.utm.edu/top20/page.php?id=54</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Notation follows <a href="http://en.wikipedia.org/wiki/Abramowitz_and_Stegun" title="Abramowitz and Stegun">Abramowitz and Stegun</a> p. 825</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a href="http://en.wikipedia.org/wiki/Abramowitz_and_Stegun" title="Abramowitz and Stegun">Abramowitz and Stegun</a> p. 825, 24.2.1 eq. I(B)</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">J. Malenfant, <a rel="nofollow" class="external text" href="http://arxiv.org/abs/1103.1585/">"Finite, Closed-form Expressions for the Partition Function and for Euler, Bernoulli, and Stirling Numbers"</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">The formula, due to Henri Faure, can be found in: <span class="citation book">Muir, Thomas (1920). <a rel="nofollow" class="external text" href="http://quod.lib.umich.edu/u/umhistmath/acm9350.0002.001/229"><i>The Theory of Determinants in the Historical Order of Development</i></a> <b>II</b>. Macmillan and Co. p.&nbsp;212.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.aufirst=Thomas&amp;rft.aulast=Muir&amp;rft.au=Muir%2C+Thomas&amp;rft.btitle=The+Theory+of+Determinants+in+the+Historical+Order+of+Development&amp;rft.date=1920&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fquod.lib.umich.edu%2Fu%2Fumhistmath%2Facm9350.0002.001%2F229&amp;rft.pages=212&amp;rft.pub=Macmillan+and+Co.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=II" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a href="http://en.wikipedia.org/wiki/Abramowitz_and_Stegun" title="Abramowitz and Stegun">Abramowitz and Stegun</a> p. 825, 24.2.2 eq. I(B)</span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a href="http://en.wikipedia.org/wiki/Abramowitz_and_Stegun" title="Abramowitz and Stegun">Abramowitz and Stegun</a> p. 826, 24.2.2 eq. II(A)</span></li>
+<li id="cite_note-HW365-12"><span class="mw-cite-backlink">^ <a href="#cite_ref-HW365_12-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-HW365_12-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Hardy and Wright (2008) p.365</span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Andrews (1976) p.35</span></li>
+<li id="cite_note-HWT359-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-HWT359_14-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Hardy and Wright (2008) Theorem 359, p.380</span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Berndt and Ono, "Ramanujan's Unpublished Manuscript on the Partition and Tau Functions with Proofs and Commentary" <a rel="nofollow" class="external autonumber" href="http://www.math.wisc.edu/%7Eono/reprints/044.pdf">[1]</a></span></li>
+<li id="cite_note-HWT3601-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-HWT3601_16-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Hardy and Wright (2008) Theorems 360,361, p.380</span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal"><a href="http://en.wikipedia.org/wiki/Ken_Ono" title="Ken Ono">Ono, Ken</a>; Ahlgren, Scott (2001). <a rel="nofollow" class="external text" href="http://www.math.wisc.edu/%7Eono/reprints/061.pdf">"Congruence properties for the partition function"</a>. <i><a href="http://en.wikipedia.org/wiki/Proceedings_of_the_National_Academy_of_Sciences" title="Proceedings of the National Academy of Sciences" class="mw-redirect">Proceedings of the National Academy of Sciences</a></i> <b>98</b> (23): 12,882–12,884. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1073%2Fpnas.191488598">10.1073/pnas.191488598</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.atitle=Congruence+properties+for+the+partition+function&amp;rft.au=Ahlgren%2C+Scott&amp;rft.aufirst=Ken&amp;rft.aulast=Ono&amp;rft.au=Ono%2C+Ken&amp;rft.date=2001&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.math.wisc.edu%2F~ono%2Freprints%2F061.pdf&amp;rft_id=info%3Adoi%2F10.1073%2Fpnas.191488598&amp;rft.issue=23&amp;rft.jtitle=Proceedings+of+the+National+Academy+of+Sciences&amp;rft.pages=12%2C882%E2%80%9312%2C884&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=98" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-And69-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-And69_18-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Andrews (1976) p.69</span></li>
+<li id="cite_note-erdos42-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-erdos42_19-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-erdos42_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation journal"><a href="http://en.wikipedia.org/wiki/Paul_Erd%C5%91s" title="Paul Erdős">Erdős, Pál</a> (1942). "On an elementary proof of some asymptotic formulas in the theory of partitions". <i>Ann. Math</i>. (2) <b>43</b>: 437–450. <a href="http://en.wikipedia.org/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.zentralblatt-math.org/zmath/en/search/?format=complete&amp;q=an:0061.07905">0061.07905</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.atitle=On+an+elementary+proof+of+some+asymptotic+formulas+in+the+theory+of+partitions&amp;rft.au=Erd%C5%91s%2C+P%C3%A1l&amp;rft.aufirst=P%C3%A1l&amp;rft.aulast=Erd%C5%91s&amp;rft.date=1942&amp;rft.genre=article&amp;rft_id=info%3Azbl%2F0061.07905&amp;rft.jtitle=Ann.+Math.&amp;rft.pages=437%E2%80%93450&amp;rft.series=%282%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=43" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Nathanson (2000) p.456</span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">F. Johansson, <i>Efficient implementation of the Hardy-Ramanujan-Rademacher formula</i>, LMS Journal of Computation and Mathematics 15 (2012), 341-359. <a rel="nofollow" class="external autonumber" href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;aid=8710297">[2]</a></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Fredrik Johansson (March 2, 2014). <a rel="nofollow" class="external text" href="http://fredrikj.net/blog/2014/03/new-partition-function-record/">"New partition function record: p(10<sup>20</sup>) computed"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.au=Fredrik+Johansson&amp;rft.aulast=Fredrik+Johansson&amp;rft.btitle=New+partition+function+record%3A+p%2810%3Csup%3E20%3C%2Fsup%3E%29+computed&amp;rft.date=March+2%2C+2014&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Ffredrikj.net%2Fblog%2F2014%2F03%2Fnew-partition-function-record%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-And7097-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-And7097_23-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Andrews (1976) pp70,97</span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Nathanson (2000) pp.475–485</span></li>
+<li id="cite_note-Nat495-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-Nat495_25-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Nathanson (2000) p.495</span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Nathanson (2000) p.458–464</span></li>
+<li id="cite_note-HW362-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-HW362_27-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Hardy and Wright (2008) p.362</span></li>
+<li id="cite_note-HW368-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-HW368_28-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Hardy and Wright (2008) p.368</span></li>
+<li id="cite_note-And199-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-And199_29-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Andrews (1976) p.199</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=16" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/George_E._Andrews" title="George E. Andrews" class="mw-redirect">George E. Andrews</a>, <i>The Theory of Partitions</i> (1976), Cambridge University Press. <i><a href="http://en.wikipedia.org/wiki/Special:BookSources/052163766X" class="internal mw-magiclink-isbn">ISBN 0-521-63766-X</a></i> .</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Tom_M._Apostol" title="Tom M. Apostol">Apostol, Tom M.</a> (1990) [1976]. <i>Modular functions and Dirichlet series in number theory</i>. <a href="http://en.wikipedia.org/wiki/Graduate_Texts_in_Mathematics" title="Graduate Texts in Mathematics">Graduate Texts in Mathematics</a> <b>41</b> (2nd ed.). New York etc.: <a href="http://en.wikipedia.org/wiki/Springer-Verlag" title="Springer-Verlag" class="mw-redirect">Springer-Verlag</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-387-97127-0" title="Special:BookSources/0-387-97127-0">0-387-97127-0</a>. <a href="http://en.wikipedia.org/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.zentralblatt-math.org/zmath/en/search/?format=complete&amp;q=an:0697.10023">0697.10023</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.au=Apostol%2C+Tom+M.&amp;rft.aufirst=Tom+M.&amp;rft.aulast=Apostol&amp;rft.btitle=Modular+functions+and+Dirichlet+series+in+number+theory&amp;rft.date=1990&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft_id=info%3Azbl%2F0697.10023&amp;rft.isbn=0-387-97127-0&amp;rft.place=New+York+etc.&amp;rft.pub=Springer-Verlag&amp;rft.series=Graduate+Texts+in+Mathematics&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=41" class="Z3988"><span style="display:none;">&nbsp;</span></span> <i>(See chapter 5 for a modern pedagogical intro to Rademacher's formula)</i>.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/G._H._Hardy" title="G. H. Hardy">Hardy, G.H.</a>; <a href="http://en.wikipedia.org/wiki/E._M._Wright" title="E. M. Wright">Wright, E.M.</a> (2008) [1938]. <i>An Introduction to the Theory of Numbers</i>. Revised by D.R. Heath-Brown and J.H. Silverman. Foreword by Andrew Wiles. (6th ed.). Oxford: <a href="http://en.wikipedia.org/wiki/Oxford_University_Press" title="Oxford University Press">Oxford University Press</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-19-921986-5" title="Special:BookSources/978-0-19-921986-5">978-0-19-921986-5</a>. <a href="http://en.wikipedia.org/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.zentralblatt-math.org/zmath/en/search/?format=complete&amp;q=an:1159.11001">1159.11001</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.aufirst=G.H.&amp;rft.au=Hardy%2C+G.H.&amp;rft.aulast=Hardy&amp;rft.au=Wright%2C+E.M.&amp;rft.btitle=An+Introduction+to+the+Theory+of+Numbers&amp;rft.date=2008&amp;rft.edition=6th&amp;rft.genre=book&amp;rft_id=info%3Azbl%2F1159.11001&amp;rft.isbn=978-0-19-921986-5&amp;rft.place=Oxford&amp;rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li><span class="citation journal"><a href="http://en.wikipedia.org/wiki/D._H._Lehmer" title="D. H. Lehmer" class="mw-redirect">Lehmer, D. H.</a> (1939). "On the remainder and convergence of the series for the partition function". <i>Trans. Amer. Math. Soc.</i> <b>46</b>: 362–373. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1090%2FS0002-9947-1939-0000410-9">10.1090/S0002-9947-1939-0000410-9</a>. <a href="http://en.wikipedia.org/wiki/Mathematical_Reviews" title="Mathematical Reviews">MR</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=0000410">0000410</a>. <a href="http://en.wikipedia.org/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.zentralblatt-math.org/zmath/en/search/?format=complete&amp;q=an:0022.20401">0022.20401</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.atitle=On+the+remainder+and+convergence+of+the+series+for+the+partition+function&amp;rft.aufirst=D.+H.&amp;rft.aulast=Lehmer&amp;rft.au=Lehmer%2C+D.+H.&amp;rft.date=1939&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1090%2FS0002-9947-1939-0000410-9&amp;rft_id=info%3Azbl%2F0022.20401&amp;rft.jtitle=Trans.+Amer.+Math.+Soc.&amp;rft.mr=0000410&amp;rft.pages=362%E2%80%93373&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=46" class="Z3988"><span style="display:none;">&nbsp;</span></span> Provides the main formula (no derivatives), remainder, and older form for A<sub>k</sub>(n).)</li>
+<li>Gupta, Gwyther, Miller, <i>Roy. Soc. Math. Tables, vol 4, Tables of partitions</i>, (1962) <i>(Has text, nearly complete bibliography, but they (and Abramowitz) missed the Selberg formula for A<sub>k</sub>(n), which is in Whiteman.)</i></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Ian_G._Macdonald" title="Ian G. Macdonald">Macdonald, Ian G.</a> (1979). <i>Symmetric functions and Hall polynomials</i>. Oxford Mathematical Monographs. <a href="http://en.wikipedia.org/wiki/Oxford_University_Press" title="Oxford University Press">Oxford University Press</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-19-853530-9" title="Special:BookSources/0-19-853530-9">0-19-853530-9</a>. <a href="http://en.wikipedia.org/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.zentralblatt-math.org/zmath/en/search/?format=complete&amp;q=an:0487.20007">0487.20007</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.aufirst=Ian+G.&amp;rft.aulast=Macdonald&amp;rft.au=Macdonald%2C+Ian+G.&amp;rft.btitle=Symmetric+functions+and+Hall+polynomials&amp;rft.date=1979&amp;rft.genre=book&amp;rft_id=info%3Azbl%2F0487.20007&amp;rft.isbn=0-19-853530-9&amp;rft.pub=Oxford+University+Press&amp;rft.series=Oxford+Mathematical+Monographs&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> (See section I.1)</li>
+<li><span class="citation book">Nathanson, M.B. (2000). <i>Elementary Methods in Number Theory</i>. Graduate Texts in Mathematics <b>195</b>. <a href="http://en.wikipedia.org/wiki/Springer-Verlag" title="Springer-Verlag" class="mw-redirect">Springer-Verlag</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-387-98912-9" title="Special:BookSources/0-387-98912-9">0-387-98912-9</a>. <a href="http://en.wikipedia.org/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.zentralblatt-math.org/zmath/en/search/?format=complete&amp;q=an:0953.11002">0953.11002</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.aufirst=M.B.&amp;rft.aulast=Nathanson&amp;rft.au=Nathanson%2C+M.B.&amp;rft.btitle=Elementary+Methods+in+Number+Theory&amp;rft.date=2000&amp;rft.genre=book&amp;rft_id=info%3Azbl%2F0953.11002&amp;rft.isbn=0-387-98912-9&amp;rft.pub=Springer-Verlag&amp;rft.series=Graduate+Texts+in+Mathematics&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=195" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li><a href="http://en.wikipedia.org/wiki/Ken_Ono" title="Ken Ono">Ken Ono</a>, <i>Distribution of the partition function modulo m</i>, Annals of Mathematics <b>151</b> (2000) pp 293–307. <i>(This paper proves congruences modulo every prime greater than 3)</i></li>
+<li><a href="http://en.wikipedia.org/wiki/Marcus_du_Sautoy" title="Marcus du Sautoy">Sautoy, Marcus Du.</a> The Music of the Primes. New York: Perennial-HarperCollins, 2003.</li>
+<li><a href="http://en.wikipedia.org/wiki/Richard_P._Stanley" title="Richard P. Stanley">Richard P. Stanley</a>, <a rel="nofollow" class="external text" href="http://www-math.mit.edu/%7Erstan/ec/"><i>Enumerative Combinatorics</i>, Volumes 1 and 2</a>. Cambridge University Press, 1999 <a href="http://en.wikipedia.org/wiki/Special:BookSources/0521560691" class="internal mw-magiclink-isbn">ISBN 0-521-56069-1</a></li>
+<li><span class="citation book">Whiteman, A. L. (1956). <a rel="nofollow" class="external text" href="http://projecteuclid.org/Dienst/UI/1.0/Summarize/euclid.pjm/1103044252">"A sum connected with the series for the partition function"</a>. <i>Pacific Journal of Math.</i> <b>6</b> (1). pp.&nbsp;159–176. <a href="http://en.wikipedia.org/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.zentralblatt-math.org/zmath/en/search/?format=complete&amp;q=an:0071.04004">0071.04004</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.atitle=A+sum+connected+with+the+series+for+the+partition+function&amp;rft.aufirst=A.+L.&amp;rft.aulast=Whiteman&amp;rft.au=Whiteman%2C+A.+L.&amp;rft.date=1956&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fprojecteuclid.org%2FDienst%2FUI%2F1.0%2FSummarize%2Feuclid.pjm%2F1103044252&amp;rft_id=info%3Azbl%2F0071.04004&amp;rft.issue=1&amp;rft.jtitle=Pacific+Journal+of+Math.&amp;rft.pages=159%E2%80%93176&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=6" class="Z3988"><span style="display:none;">&nbsp;</span></span> <i>(Provides the Selberg formula. The older form is the finite Fourier expansion of Selberg.)</i></li>
+<li><a href="http://en.wikipedia.org/wiki/Hans_Rademacher" title="Hans Rademacher">Hans Rademacher</a>, <i>Collected Papers of Hans Rademacher</i>, (1974) MIT Press; v II, p 100–107, 108–122, 460–475.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Mikl%C3%B3s_B%C3%B3na" title="Miklós Bóna">Miklós Bóna</a> (2002). <i>A Walk Through Combinatorics: An Introduction to Enumeration and Graph Theory</i>. World Scientific Publishing. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/981-02-4900-4" title="Special:BookSources/981-02-4900-4">981-02-4900-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.aulast=Mikl%C3%B3s+B%C3%B3na&amp;rft.au=Mikl%C3%B3s+B%C3%B3na&amp;rft.btitle=A+Walk+Through+Combinatorics%3A+An+Introduction+to+Enumeration+and+Graph+Theory&amp;rft.date=2002&amp;rft.genre=book&amp;rft.isbn=981-02-4900-4&amp;rft.pub=World+Scientific+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span> (qn elementary introduction to the topic of integer partition, including a discussion of Ferrers graphs)</li>
+<li><span class="citation book">George E. Andrews, Kimmo Eriksson (2004). <i>Integer Partitions</i>. Cambridge University Press. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-521-60090-1" title="Special:BookSources/0-521-60090-1">0-521-60090-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.au=George+E.+Andrews%2C+Kimmo+Eriksson&amp;rft.aulast=George+E.+Andrews%2C+Kimmo+Eriksson&amp;rft.btitle=Integer+Partitions&amp;rft.date=2004&amp;rft.genre=book&amp;rft.isbn=0-521-60090-1&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li>'A Disappearing Number', devised piece by <a href="http://en.wikipedia.org/wiki/Complicite" title="Complicite">Complicite</a>, mention Ramanujan's work on the Partition Function, 2007</li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit&amp;section=17" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span id="CITEREFHazewinkel2001" class="citation">Hazewinkel, Michiel, ed. (2001), <a rel="nofollow" class="external text" href="http://www.encyclopediaofmath.org/index.php?title=p/p071740">"Partition"</a>, <i><a href="http://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics" title="Encyclopedia of Mathematics">Encyclopedia of Mathematics</a></i>, <a href="http://en.wikipedia.org/wiki/Springer_Science%2BBusiness_Media" title="Springer Science+Business Media">Springer</a>, <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-55608-010-4" title="Special:BookSources/978-1-55608-010-4">978-1-55608-010-4</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APartition+%28number+theory%29&amp;rft.atitle=Encyclopedia+of+Mathematics&amp;rft.btitle=Partition&amp;rft.date=2001&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.encyclopediaofmath.org%2Findex.php%3Ftitle%3Dp%2Fp071740&amp;rft.isbn=978-1-55608-010-4&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.se16.info/js/partitions.htm">Partition and composition calculator</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.numericana.com/data/partition.htm">First 4096 values of the partition function</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.numericana.com/answer/numbers.htm#partitions">An algorithm to compute the partition function</a></li>
+<li><span class="citation mathworld" id="Reference-Mathworld-Partition"><a href="http://en.wikipedia.org/wiki/Eric_W._Weisstein" title="Eric W. Weisstein">Weisstein, Eric W.</a>, "<a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/Partition.html">Partition</a>", <i><a href="http://en.wikipedia.org/wiki/MathWorld" title="MathWorld">MathWorld</a></i>.</span></li>
+<li><span class="citation mathworld" id="Reference-Mathworld-Partition_Function_P"><a href="http://en.wikipedia.org/wiki/Eric_W._Weisstein" title="Eric W. Weisstein">Weisstein, Eric W.</a>, "<a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/PartitionFunctionP.html">Partition Function P</a>", <i><a href="http://en.wikipedia.org/wiki/MathWorld" title="MathWorld">MathWorld</a></i>.</span></li>
+<li><a rel="nofollow" class="external text" href="http://www.sciencenews.org/articles/20050618/bob9.asp">Pieces of Number</a> from Science News Online</li>
+<li><a rel="nofollow" class="external text" href="http://www.math.upenn.edu/%7Ewilf/PIMS/PIMSLectures.pdf">Lectures on Integer Partitions</a> by Herbert S. Wilf</li>
+<li><a rel="nofollow" class="external text" href="http://www.luschny.de/math/seq/CountingWithPartitions.html">Counting with partitions</a> with reference tables to the On-Line Encyclopedia of Integer Sequences</li>
+<li><a rel="nofollow" class="external text" href="http://metacpan.org/module/Integer::Partition">Integer::Partition Perl module</a> from <a href="http://en.wikipedia.org/wiki/CPAN" title="CPAN">CPAN</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.site.uottawa.ca/%7Eivan/F49-int-part.pdf">Fast Algorithms For Generating Integer Partitions</a></li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/0909.2331">Generating All Partitions: A Comparison Of Two Encodings</a></li>
+<li>Amanda Folsom, Zachary A. Kent, and Ken Ono, <a rel="nofollow" class="external text" href="http://www.aimath.org/news/partition/folsom-kent-ono.pdf"><i>l</i>-adic properties of the partition function</a>. In press.</li>
+<li>Jan Hendrik Bruinier and Ken Ono, <a rel="nofollow" class="external text" href="http://www.aimath.org/news/partition/brunier-ono.pdf">An algebraic formula for the partition function</a>. In press.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 1.384 seconds
+Real time usage: 1.653 seconds
+Preprocessor visited node count: 2213/1000000
+Preprocessor generated node count: 10984/1500000
+Post‐expand include size: 30945/2048000 bytes
+Template argument size: 1777/2048000 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 1/500
+Lua time usage: 0.065/10.000 seconds
+Lua memory usage: 2.05 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:104790-0!*!0!!en!4!*!math=0 and timestamp 20140303081320
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;oldid=597906863#Ferrers_diagram">http://en.wikipedia.org/w/index.php?title=Partition_(number_theory)&amp;oldid=597906863#Ferrers_diagram</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Number_theory" title="Category:Number theory">Number theory</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Combinatorics" title="Category:Combinatorics">Combinatorics</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Arithmetic_functions" title="Category:Arithmetic functions">Arithmetic functions</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Integer_sequences" title="Category:Integer sequences">Integer sequences</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_June_2013" title="Category:Articles containing potentially dated statements from June 2013">Articles containing potentially dated statements from June 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Partition+%28number+theory%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Partition+%28number+theory%29" title="You're encouraged to log in; however, it's not mandatory. [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Partition_%28number_theory%29" title="View the content page [alt-shift-c]" accesskey="c">Article</a></span></li>
+					<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Partition_%28number_theory%29" title="Discussion about the content page [alt-shift-t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 tabindex="0" id="p-variants-label"><span>Variants</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Partition_%28number_theory%29">Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=edit" title="You can edit this page. 
+Please review your changes before saving. [alt-shift-e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 tabindex="0" id="p-cactions-label"><span>Actions</span><a tabindex="-1" href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input autocomplete="off" tabindex="1" name="search" placeholder="Search" title="Search Wikipedia [alt-shift-f]" accesskey="f" id="searchInput" type="search"><input value="Special:Search" name="title" type="hidden"><input name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" type="submit">		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div class="collapsible-nav" id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+	<h3 tabindex="2" id="p-interaction-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-interaction-list" aria-haspopup="true" href="#">Interaction</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-interaction-list">
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 tabindex="3" id="p-tb-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-tb-list" aria-haspopup="true" href="#">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Partition_%28number_theory%29" title="List of all English Wikipedia pages containing links to this page [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Partition_%28number_theory%29" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;oldid=597906863" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1082910" title="Link to connected data repository item [alt-shift-g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Partition_%28number_theory%29&amp;id=597906863" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+	<h3 tabindex="4" id="p-coll-print_export-label"><a aria-expanded="false" aria-pressed="false" role="button" aria-controls="p-coll-print_export-list" aria-haspopup="true" href="#">Print/export</a></h3>
+	<div class="body">
+		<ul id="p-coll-print_export-list">
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Partition+%28number+theory%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Partition+%28number+theory%29&amp;oldid=597906863&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Partition_%28number_theory%29&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span aria-haspopup="true" role="button" tabindex="0" title="Language settings" class="uls-settings-trigger"></span>
+	<h3 tabindex="5" id="p-lang-label"><a aria-expanded="true" aria-pressed="true" role="button" aria-controls="p-lang-list" aria-haspopup="true" href="#">Languages</a></h3>
+	<div style="display: block;" class="body">
+		<ul id="p-lang-list">
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D8%AA%D8%AC%D8%B2%D8%A6%D8%A9_%28%D9%86%D8%B8%D8%B1%D9%8A%D8%A9_%D8%A7%D9%84%D8%A3%D8%B9%D8%AF%D8%A7%D8%AF%29" title="تجزئة (نظرية الأعداد) – Arabic" hreflang="ar" lang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Partici%C3%B3n_%28teor%C3%ADa_de_n%C3%BAmeros%29" title="Partición (teoría de números) – Spanish" hreflang="es" lang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Partition_d%27un_entier" title="Partition d'un entier – French" hreflang="fr" lang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EB%B6%84%ED%95%A0%EC%88%98" title="분할수 – Korean" hreflang="ko" lang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Partizione_di_un_intero" title="Partizione di un intero – Italian" hreflang="it" lang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%A0%D7%A7%D7%A6%D7%99%D7%99%D7%AA_%D7%94%D7%97%D7%9C%D7%95%D7%A7%D7%94_%28%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D%29" title="פונקציית החלוקה (תורת המספרים) – Hebrew" hreflang="he" lang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Part%C3%ADci%C3%B3_%28sz%C3%A1melm%C3%A9let%29" title="Partíció (számelmélet) – Hungarian" hreflang="hu" lang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Partitie_%28getaltheorie%29" title="Partitie (getaltheorie) – Dutch" hreflang="nl" lang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E6%95%B0%E3%81%AE%E5%88%86%E5%89%B2" title="自然数の分割 – Japanese" hreflang="ja" lang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%B1%D0%B8%D0%B5%D0%BD%D0%B8%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%B0" title="Разбиение числа – Russian" hreflang="ru" lang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sq"><a href="http://sq.wikipedia.org/wiki/Particioni_i_numrit_natyral" title="Particioni i numrit natyral – Albanian" hreflang="sq" lang="sq">Shqip</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Heltalspartition" title="Heltalspartition – Swedish" hreflang="sv" lang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-ta"><a href="http://ta.wikipedia.org/wiki/%E0%AE%8E%E0%AE%A3%E0%AF%8D_%E0%AE%AA%E0%AE%BF%E0%AE%B0%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%A9%E0%AF%88" title="எண் பிரிவினை – Tamil" hreflang="ta" lang="ta">தமிழ்</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Ph%C3%A2n_ho%E1%BA%A1ch_%28l%C3%BD_thuy%E1%BA%BFt_s%E1%BB%91%29" title="Phân hoạch (lý thuyết số) – Vietnamese" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B8%E5%88%86%E6%8B%86" title="整數分拆 – Chinese" hreflang="zh" lang="zh">中文</a></li>
+			
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1082910#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 3 March 2014 at 03:45.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Partition_%28number_theory%29#Ferrers_diagram" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/wikimedia-button.png" alt="Wikimedia Foundation" height="31" width="88"></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.articleFeedbackv5.startup","ext.wikimediaShopLink.core","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="Partition%20%28number%20theory%29%20-%20Wikipedia,%20the%20free%20encyclopedia_files/load_002.php"></script>
+<!-- Served by mw1168 in 0.202 secs. -->
+	
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
