@@ -1,0 +1,371 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/186/trunk/acm/template
+END
+hash.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/8/trunk/acm/template/hash.cc
+END
+circle_k_union.cc
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/186/trunk/acm/template/circle_k_union.cc
+END
+nim_product.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/64/trunk/acm/template/nim_product.cc
+END
+rmq2d.cc
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/75/trunk/acm/template/rmq2d.cc
+END
+bcc.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/77/trunk/acm/template/bcc.cc
+END
+block_array.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/acm/template/block_array.cc
+END
+leftist_tree.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/22/trunk/acm/template/leftist_tree.cc
+END
+exgcd.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/147/trunk/acm/template/exgcd.cc
+END
+geometry.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/167/trunk/acm/template/geometry.cc
+END
+linear_transform3d.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/85/trunk/acm/template/linear_transform3d.cc
+END
+tree_restore.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/46/trunk/acm/template/tree_restore.cc
+END
+delaunay_triangulation.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/79/trunk/acm/template/delaunay_triangulation.cc
+END
+linear_sequence.cc
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/78/trunk/acm/template/linear_sequence.cc
+END
+dynamic_tree.cc
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/110/trunk/acm/template/dynamic_tree.cc
+END
+dlx_exact_cover.cc
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/78/trunk/acm/template/dlx_exact_cover.cc
+END
+circle_union.cc
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/186/trunk/acm/template/circle_union.cc
+END
+max_sub_rect.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/acm/template/max_sub_rect.cc
+END
+range_tree.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/185/trunk/acm/template/range_tree.cc
+END
+prime.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/103/trunk/acm/template/prime.cc
+END
+quadratic_residue_solutions.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/167/trunk/acm/template/quadratic_residue_solutions.cc
+END
+limited_flow.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/acm/template/limited_flow.cc
+END
+tarjan.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/78/trunk/acm/template/tarjan.cc
+END
+circle_tree.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/79/trunk/acm/template/circle_tree.cc
+END
+tree_heavy_edge_div.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/8/trunk/acm/template/tree_heavy_edge_div.cc
+END
+geometry3d.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/70/trunk/acm/template/geometry3d.cc
+END
+dinic.cc
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/52/trunk/acm/template/dinic.cc
+END
+kmp.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/140/trunk/acm/template/kmp.cc
+END
+splay.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/111/trunk/acm/template/splay.cc
+END
+half_plane.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/79/trunk/acm/template/half_plane.cc
+END
+calculator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/147/trunk/acm/template/calculator.cc
+END
+vimrc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/118/trunk/acm/template/vimrc
+END
+quadratic_residue.cc
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/51/trunk/acm/template/quadratic_residue.cc
+END
+dynamic_half_plane.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/52/trunk/acm/template/dynamic_half_plane.cc
+END
+dlx_multi_cover.cc
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/74/trunk/acm/template/dlx_multi_cover.cc
+END
+issa.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/57/trunk/acm/template/issa.cc
+END
+tree_div.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/40/trunk/acm/template/tree_div.cc
+END
+suffix_array.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/19/trunk/acm/template/suffix_array.cc
+END
+binary_indexed_tree.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/73/trunk/acm/template/binary_indexed_tree.cc
+END
+matrix.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/70/trunk/acm/template/matrix.cc
+END
+integral.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/12/trunk/acm/template/integral.cc
+END
+jump_list.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/40/trunk/acm/template/jump_list.cc
+END
+min_cost_max_flow.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/170/trunk/acm/template/min_cost_max_flow.cc
+END
+km.cc
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/52/trunk/acm/template/km.cc
+END
+scc.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/71/trunk/acm/template/scc.cc
+END
+combination_number.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/116/trunk/acm/template/combination_number.cc
+END
+guassian.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/101/trunk/acm/template/guassian.cc
+END
+newton.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/83/trunk/acm/template/newton.cc
+END
+dijkstra.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/79/trunk/acm/template/dijkstra.cc
+END
+treap.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/111/trunk/acm/template/treap.cc
+END
+prime_random.cc
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/148/trunk/acm/template/prime_random.cc
+END
+hungarian.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/64/trunk/acm/template/hungarian.cc
+END
+polygon_intersection.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/52/trunk/acm/template/polygon_intersection.cc
+END
+heap.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/79/trunk/acm/template/heap.cc
+END
+kd_tree.cc
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/60/trunk/acm/template/kd_tree.cc
+END
+manacher.cc
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/acm/template/manacher.cc
+END
+ac_automata.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/73/trunk/acm/template/ac_automata.cc
+END
+cubic_solver.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/83/trunk/acm/template/cubic_solver.cc
+END
+fft.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/145/trunk/acm/template/fft.cc
+END
+sam.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/184/trunk/acm/template/sam.cc
+END
+bignum.cc
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/147/trunk/acm/template/bignum.cc
+END
+segment_tree.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/acm/template/segment_tree.cc
+END
