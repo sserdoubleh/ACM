@@ -200,6 +200,10 @@ void rotate_calipers(point ps[], int n, double &area, double &peri)  {
     if (++q[bi] == ps + n) q[bi] = ps + 0;
     alpha = fix(alpha + gap_min);
 
+	printf("%lf\n", alpha);
+	for (int i = 0; i < 4; i++)
+		printf("%d%c", q[i]-ps, " \n"[i==3]);
+
     double a = shadow_length(alpha + pi / 2, *q[0], *q[2]);
     double b = shadow_length(alpha, *q[1], *q[3]);
     area = min(area, a * b);
@@ -682,5 +686,18 @@ circle min_circle_cover(point p[], int n) {
   }
 }
 
+const int maxn = 1e5+100;
+int n;
+point p[maxn];
+
 int main() {
+	while (~scanf("%d", &n) && n)
+	{
+		for (int i = 0; i < n; i++)
+			scanf("%lf%lf", &p[i].x, &p[i].y);
+
+		double A, B;
+		rotate_calipers(p, n, A, B);
+		printf("%.2lf %.2lf\n", A, B);
+	}
 }
