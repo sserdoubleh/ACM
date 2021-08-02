@@ -55,7 +55,7 @@ struct Treap {
         if (o == NULL) {
             o = new Node(x);
         } else {
-            int d = (x < o->v? 0: 1);
+            int d = x < o->v? 0: 1;
             insert(o->ch[d], x);
             if (o->ch[d] > o) rotate(o, d ^ 1);
         }
@@ -63,19 +63,21 @@ struct Treap {
     }
 
     void remove(Node* &o, T x) {
+        if (o == NULL) return;
         int d = o->cmp(x);
         if (d == -1) {
             Node *u = o;
             if (o->ch[0] != NULL && o->ch[1] != NULL) {
-                int d2 = (o->ch[0] > o->ch[1]? 1: 0);
-                rotate(o, d2); remove(o->ch[d2], x);
+                int d2 = o->ch[0] > o->ch[1]? 1: 0;
+                rotate(o, d2);
+                remove(o->ch[d2], x);
             } else {
                 if (o->ch[0] == NULL) o = o->ch[1];
                 else o = o->ch[0];
                 delete u;
             }
         } else
-            remove(o->ch[d],x);
+            remove(o->ch[d], x);
         if (o != NULL)
             o->maintain();
     }
@@ -91,7 +93,7 @@ struct Treap {
 
     T kth(Node *o, int k) {
         if (o == NULL || k <= 0 || k > o->s) return -1;
-        int s = (o->ch[0] == NULL? 0: o->ch[0]->s);
+        int s = o->ch[0] == NULL? 0: o->ch[0]->s;
         if (k == s + 1) return o->v;
         else if (k <= s) return kth(o->ch[0], k);
         else return kth(o->ch[1], k - s - 1);
@@ -99,7 +101,7 @@ struct Treap {
 
     int rank(Node *o, T v) {
         int d = o->cmp(v);
-        int s = (o->ch[0] == NULL? 0: o->ch[0]->s);
+        int s = o->ch[0] == NULL? 0: o->ch[0]->s;
         if (d == -1) return s + 1;
         else if (d == 0) return rank(o->ch[0], v);
         else return s + 1 + rank(o->ch[1], v);
@@ -108,7 +110,7 @@ struct Treap {
     int upper_bound(Node *o, T v) {
         if (o == NULL) return 0;
         int d = o->cmp(v);
-        int s = (o->ch[0] == NULL? 0: o->ch[0]->s);
+        int s = o->ch[0] == NULL? 0: o->ch[0]->s;
         if (d == 0) return upper_bound(o->ch[0], v);
         else return s + 1 + upper_bound(o->ch[1], v);
     }
@@ -120,20 +122,22 @@ struct Treap {
     }
 
     void Insert(T v) {
+        // 将一个元素v插入
         insert(root, v);
     }
 
     void Remove(T v) {
+        // 将一个元素v删除，允许删除一个不存在的元素（不会修改Treap）
         remove(root, v);
     }
 
     bool Find(T v) {
-        // 在Treap中查找x是否存在
+        // 在Treap中查找元素v是否存在
         return find(root, v);
     }
 
     T GetKth(int k) {
-        // 计算排名第k的数是多少
+        // 返回排名第k小的元素
         return kth(root, k);
     }
 
@@ -155,13 +159,14 @@ struct Treap {
 
 template<typename T>
 struct Splay {
+    static const int N = 100000;
     struct Node {
         Node *ch[2];
         T v;
         int s;
-        bool flip;
+        int flip;
 
-        Node(int v): v(v), s(1),flip(0) {}
+        Node(T v): v(v), s(1), flip(0) {}
 
         int cmp(int k) const {
             int ts = (ch[0] ? ch[0]->s: 0) + 1;
@@ -185,11 +190,11 @@ struct Splay {
         }
     };
 
-    Node * root;
+    Node* root;
 
     Node* build(T *a, int sz) {
         if (!sz) return NULL;
-        Node* o = new Node(*(a + sz / 2 + 1));
+        Node* o = new Node(*(a + sz / 2));
         o->ch[0] = build(a, sz / 2);
         o->ch[1] = build(a + sz / 2 + 1, sz - sz / 2 - 1);
         o->maintain();
@@ -197,6 +202,7 @@ struct Splay {
     }
 
     void Build(T * a, int n) {
+        // 构建一个由splay维护的序列
         root = build(a, n);
     }
 
@@ -211,6 +217,7 @@ struct Splay {
     }
 
     void splay(Node* &o, int k) {
+        // splay核心操作，将序列的第k个元素所在的节点变为splay的根节点
         o->pushdown();
         int d = o->cmp(k);
         if (d == 1) k -= (o->ch[0]? o->ch[0]->s: 0) + 1;
@@ -224,23 +231,48 @@ struct Splay {
                 if (d == d2) rotate(o, d ^ 1);
                 else rotate(o->ch[d], d);
             }
-            rotate(o, d^1);
+            rotate(o, d ^ 1);
         }
     }
 
-    Node *merge(Node* left, Node* right) {
+    Node* Merge(Node* left, Node* right) {
+        // 合并两个splay维护的序列
+        // 需要保证left不为NULL，right则没有这个要求
         splay(left, left->s);
         left->ch[1] = right;
         left->maintain();
         return left;
     }
 
-    void split(Node* o, int k, Node* &left, Node* &right) {
+    void Split(Node* o, int k, Node* &left, Node* &right) {
+        // 从位置k切分splay维护的序列
+        // 切分后，用两个splay维护切分后的序列
         splay(o, k);
         left = o;
         right = o->ch[1];
         left->ch[1] = NULL;
         left->maintain();
+    }
+
+    void ReverseAndAppend(int l, int r) {
+        // 任务相关的合成操作，其余操作可以根据参考这一个实现
+        Node *left, *mid, *right, *temp;
+        Split(root, l, left, temp);
+        Split(temp, r - l + 1, mid, right);
+        mid->flip ^= 1;
+        root = Merge(Merge(left, right), mid);
+    }
+
+    void print(Node* o) {
+        o->pushdown();
+        if (o->ch[0]) print(o->ch[0]);
+        if (o->v > 0) cout << o->v << "\n"; // 任务相关，不输出虚拟节点
+        if (o->ch[1]) print(o->ch[1]);
+    }
+
+    void Print() {
+        // 遍历Splay，输出序列
+        print(root);
     }
 };
 
@@ -289,10 +321,30 @@ struct HDU_5887 {
     }
 };
 
+struct UVA_11922 {
+    static const int N = 100000;
+    int a[N + 1];
+    Splay<int> splay;
+
+    void Solve() {
+        int n, m;
+        cin >> n >> m;
+        for (int i = 0; i <= n; i++) a[i] = i;
+        // 需要新建一个虚拟节点，方便操作，无需再考虑是否存在NULL
+        splay.Build(a, n + 1);
+        while (m--) {
+            int l, r;
+            cin >> l >> r;
+            splay.ReverseAndAppend(l, r);
+        }
+        splay.Print();
+    }
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
-    HDU_5887 problem;
+    UVA_11922 problem;
     problem.Solve();
 }
