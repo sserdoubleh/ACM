@@ -12,6 +12,55 @@
 #include <iostream>
 using namespace std;
 
+template<typename T>
+class BinaryIndexedTree {
+private:
+    static const int N = 3e5 + 2;
+    int n;
+    int c[N];
+public:
+    void Build(int n) {
+        this->n = n;
+        for (int i = 0; i <= n; i++)
+            c[i] = 0;
+    }
+
+    void Add(int x, int v) {
+        for (x++; x <= n; x += x&-x)
+            c[x] += v;
+    }
+
+    T Sum(int x) {
+        T ret = 0;
+        for (x++; x; x -= x&-x)
+            ret += c[x];
+        return ret;
+    }
+};
+
+class DisjointSet {
+private:
+    int n;
+    vector<int> pa;
+public:
+    void Build(int n) {
+        this->n = n;
+        pa.resize(n);
+        for (int i = 0; i < n; i++) pa[i] = i;
+    }
+
+    int Find(int x) {
+        return x == pa[x]? x: pa[x] = Find(pa[x]);
+    }
+
+    bool Union(int x, int y) {
+        int fx = Find(x), fy = Find(y);
+        if (fx == fy) return false;
+        pa[fx] = fy;
+        return true;
+    }
+};
+
 // SparseTable
 template <typename T, class F = function<T(const T&, const T&)>>
 class SparseTable {
