@@ -12,8 +12,37 @@
 #include <iostream>
 using namespace std;
 
+// SparseTable
+template <typename T, class F = function<T(const T&, const T&)>>
+class SparseTable {
+public:
+    int n;
+    vector<vector<T>> mat;
+    F func;
+
+    SparseTable(const vector<T>& a, const F& f) : func(f) {
+        n = static_cast<int>(a.size());
+        int max_log = 32 - __builtin_clz(n);
+        mat.resize(max_log);
+        mat[0] = a;
+        for (int j = 1; j < max_log; j++) {
+            mat[j].resize(n - (1 << j) + 1);
+            for (int i = 0; i <= n - (1 << j); i++) {
+                mat[j][i] = func(mat[j - 1][i], mat[j - 1][i + (1 << (j - 1))]);
+            }
+        }
+    }
+
+    T get(int from, int to) const {
+        assert(0 <= from && from <= to && to <= n - 1);
+        int lg = 32 - __builtin_clz(to - from + 1) - 1;
+        return func(mat[lg][from], mat[lg][to - (1 << lg) + 1]);
+    }
+};
+
 template<typename T>
-struct Treap {
+class Treap {
+private:
     struct Node {
         Node *ch[2];
         int r;
@@ -117,6 +146,7 @@ struct Treap {
 
     Node *root;
 
+public:
     void Init() {
         root = NULL;
     }
@@ -158,7 +188,8 @@ struct Treap {
 };
 
 template<typename T>
-struct Splay {
+class Splay {
+private:
     static const int N = 100000;
     struct Node {
         Node *ch[2];
@@ -190,8 +221,6 @@ struct Splay {
         }
     };
 
-    Node* root;
-
     Node* build(T *a, int sz) {
         if (!sz) return NULL;
         Node* o = new Node(*(a + sz / 2));
@@ -199,11 +228,6 @@ struct Splay {
         o->ch[1] = build(a + sz / 2 + 1, sz - sz / 2 - 1);
         o->maintain();
         return o;
-    }
-
-    void Build(T * a, int n) {
-        // 构建一个由splay维护的序列
-        root = build(a, n);
     }
 
     // d = 0 left rotate, d = 1 right rotate
@@ -235,7 +259,14 @@ struct Splay {
         }
     }
 
-    Node* Merge(Node* left, Node* right) {
+    void print(Node* o) {
+        o->pushdown();
+        if (o->ch[0]) print(o->ch[0]);
+        if (o->v > 0) cout << o->v << "\n"; // 任务相关，不输出虚拟节点
+        if (o->ch[1]) print(o->ch[1]);
+    }
+
+    Node* merge(Node* left, Node* right) {
         // 合并两个splay维护的序列
         // 需要保证left不为NULL，right则没有这个要求
         splay(left, left->s);
@@ -244,7 +275,7 @@ struct Splay {
         return left;
     }
 
-    void Split(Node* o, int k, Node* &left, Node* &right) {
+    void split(Node* o, int k, Node* &left, Node* &right) {
         // 从位置k切分splay维护的序列
         // 切分后，用两个splay维护切分后的序列
         splay(o, k);
@@ -254,20 +285,21 @@ struct Splay {
         left->maintain();
     }
 
+    Node* root;
+
+public:
+    void Build(T * a, int n) {
+        // 构建一个由splay维护的序列
+        root = build(a, n);
+    }
+
     void ReverseAndAppend(int l, int r) {
         // 任务相关的合成操作，其余操作可以根据参考这一个实现
         Node *left, *mid, *right, *temp;
-        Split(root, l, left, temp);
-        Split(temp, r - l + 1, mid, right);
+        split(root, l, left, temp);
+        split(temp, r - l + 1, mid, right);
         mid->flip ^= 1;
-        root = Merge(Merge(left, right), mid);
-    }
-
-    void print(Node* o) {
-        o->pushdown();
-        if (o->ch[0]) print(o->ch[0]);
-        if (o->v > 0) cout << o->v << "\n"; // 任务相关，不输出虚拟节点
-        if (o->ch[1]) print(o->ch[1]);
+        root = merge(merge(left, right), mid);
     }
 
     void Print() {
@@ -276,7 +308,8 @@ struct Splay {
     }
 };
 
-struct HDU_5887 {
+class HDU_5887 {
+private:
     static const int N = 100000;
     int n;
     long long k, ans;
@@ -294,6 +327,7 @@ struct HDU_5887 {
         treap.Remove(a[u]);
     }
 
+public:
     void Solve() {
         int T;
         cin >> T;
@@ -321,11 +355,13 @@ struct HDU_5887 {
     }
 };
 
-struct UVA_11922 {
+class UVA_11922 {
+private:
     static const int N = 100000;
     int a[N + 1];
     Splay<int> splay;
 
+public:
     void Solve() {
         int n, m;
         cin >> n >> m;
