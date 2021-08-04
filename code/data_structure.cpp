@@ -15,18 +15,14 @@ using namespace std;
 template<typename T>
 class BinaryIndexedTree {
 private:
-    static const int N = 3e5 + 2;
-    int n;
-    int c[N];
+    vector<T> c;
 public:
     void Build(int n) {
-        this->n = n;
-        for (int i = 0; i <= n; i++)
-            c[i] = 0;
+        c = vector<T>(n + 1, 0);
     }
 
-    void Add(int x, int v) {
-        for (x++; x <= n; x += x&-x)
+    void Add(int x, T v) {
+        for (x++; x < c.size(); x += x&-x)
             c[x] += v;
     }
 
@@ -86,6 +82,95 @@ public:
         assert(0 <= from && from <= to && to <= n - 1);
         int lg = 32 - __builtin_clz(to - from + 1) - 1;
         return func(mat[lg][from], mat[lg][to - (1 << lg) + 1]);
+    }
+};
+
+template<typename T>
+class SegmentTree {
+private:
+    static const int N = 20;
+#define xxx int lc = o<<1, rc = o<<1|1, mid = (l + r) >> 1
+#define lson lc, l, mid
+#define rson rc, mid + 1, r
+
+    int n;
+    T sumv[2<<N];
+    T addv[2<<N];
+
+    int ql, qr;
+    T qv;
+    T q_sum;
+
+    // 初始化线段树
+    void init(int o, int l, int r) {
+        sumv[o] = addv[o] = 0;
+        if (l == r) return;
+        xxx;
+        init(lson);
+        init(rson);
+    }
+
+    // 维护线段树
+    void down(int o, int l, int r) {
+        if (addv[o]) {
+            addv[o << 1] += addv[o];
+            addv[o << 1 | 1] += addv[o];
+            sumv[o] += addv[o] * (r - l + 1);
+            addv[o] = 0;
+        }
+    }
+
+    void up(int o, int l, int r) {
+        int mid = (l + r) / 2;
+        sumv[o] = sumv[o << 1] + addv[o << 1] * (mid - l + 1) + sumv[o << 1 | 1] + addv[o << 1 | 1] * (r - mid);
+    }
+
+    // 区间修改
+    void update(int o, int l, int r) {
+        if (ql <= l && r <= qr) {
+            addv[o] += qv;
+            return;
+        }
+        xxx;
+        if (ql <= mid) update(lson);
+        if (qr > mid) update(rson);
+        up(o, l, r);
+    }
+
+    // 区间查询
+    void query(int o, int l, int r) {
+        if (ql <= l && r <= qr) {
+            q_sum += sumv[o] + addv[o] * (r - l + 1);
+            return;
+        }
+        xxx;
+        down(o, l, r);
+        if (ql <= mid) query(lson);
+        if (qr > mid) query(rson);
+    }
+
+public:
+
+    void Build(int n) {
+        this->n = n;
+        // init(1, 1, n);
+    }
+
+    void Add(int l, int r, T v) {
+        if (l > r) return;
+        ql = l;
+        qr = r;
+        qv = v;
+        update(1, 1, n);
+    }
+
+    T Sum(int l, int r) {
+        if (l > r) return 0;
+        ql = l;
+        qr = r;
+        q_sum = 0;
+        query(1, 1, n);
+        return q_sum;
     }
 };
 
@@ -239,7 +324,6 @@ public:
 template<typename T>
 class Splay {
 private:
-    static const int N = 100000;
     struct Node {
         Node *ch[2];
         T v;
@@ -359,11 +443,10 @@ public:
 
 class HDU_5887 {
 private:
-    static const int N = 100000;
     int n;
     long long k, ans;
-    int a[N], d[N];
-    vector<int> G[N];
+    vector<int> a, d;
+    vector<vector<int>>  G;
     Treap<long long> treap;
 
     void dfs(int u) {
@@ -382,6 +465,9 @@ public:
         cin >> T;
         while (T--) {
             cin >> n >> k;
+            a.resize(n);
+            d.resize(n);
+            G.resize(n);
             for (int i = 0; i < n; i++) {
                 cin >> a[i];
                 d[i] = 0;
@@ -406,17 +492,17 @@ public:
 
 class UVA_11922 {
 private:
-    static const int N = 100000;
-    int a[N + 1];
+    vector<int> a;
     Splay<int> splay;
 
 public:
     void Solve() {
         int n, m;
         cin >> n >> m;
+        a.resize(n + 1);
         for (int i = 0; i <= n; i++) a[i] = i;
         // 需要新建一个虚拟节点，方便操作，无需再考虑是否存在NULL
-        splay.Build(a, n + 1);
+        splay.Build(a.data(), n + 1);
         while (m--) {
             int l, r;
             cin >> l >> r;
