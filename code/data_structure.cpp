@@ -12,35 +12,72 @@
 #include <iostream>
 using namespace std;
 
+// Point update + Prefix query
+// 1. Update: tree.Update(P, val)
+// 2. Query: bit.Sum(P)
+// Requirement:
+// 0. Zero: 0 + a = a
+// 1. Associative law: a + b + c = (a + b) + c = a + (b + c)
+// example: addition, multiplication, maximum, minimum
+//
+// Point update + Range update
+// Note: Query slow than ZKWSegmentTree
+// 1. Update: tree.Update(P, val)
+// 2. Query: bit.Sum(R) - bit.Sum(L - 1)
+// Requirement:
+// 0. Zero: 0 + a = a
+// 1. Associative law: a + b + c = (a + b) + c = a + (b + c)
+// 2. a + b - b = a
+// example: addition, multiplication
+//
+// Range update + Point query
+// 1. Update: bit.Update(L, val), bit.Update(R + 1, val)
+// 2. Query: bit.Sum(P, val)
+// Requirement:
+// 0. Zero: 0 + a = a
+// 1. Associative law: a + b + c = (a + b) + c = a + (b + c)
+// 2. a + b - b = a
+// example: addition, multiplication
+//
+// Note:
+// 1. Index start from 1
 template<typename T>
 class BinaryIndexedTree {
 private:
     vector<T> c;
+
 public:
     void Build(int n) {
         c = vector<T>(n + 1, 0);
     }
 
     void Add(int x, T v) {
-        for (x++; x < c.size(); x += x&-x)
+        while (x < c.size()) {
+            // TODO: Overloaded
             c[x] += v;
+            x += x&-x;
+        }
     }
 
     T Sum(int x) {
         T ret = 0;
-        for (x++; x; x -= x&-x)
+        while (x) {
+            // TODO: Overloaded
             ret += c[x];
+            x -= x&-x;
+        }
         return ret;
     }
 };
 
+// Note:
+// 1. Indexed from 0.
 class DisjointSet {
 private:
-    int n;
     vector<int> pa;
+
 public:
     void Build(int n) {
-        this->n = n;
         pa.resize(n);
         for (int i = 0; i < n; i++) pa[i] = i;
     }
@@ -53,18 +90,28 @@ public:
         int fx = Find(x), fy = Find(y);
         if (fx == fy) return false;
         pa[fx] = fy;
+        // TODO: Overloaded
         return true;
     }
 };
 
-// SparseTable
+// Range query
+// 1. Query: table.Query(L, R)
+// Requirement:
+// 0. Zero: 0 + a = a
+// 1. Associative law: a + b + c = (a + b) + c = a + (b + c)
+// example: addition, multiplication, maximum, minimum
+//
+// Note:
+// 1. Indexed from 0.
 template <typename T, class F = function<T(const T&, const T&)>>
 class SparseTable {
-public:
+private:
     int n;
     vector<vector<T>> mat;
     F func;
 
+public:
     SparseTable(const vector<T>& a, const F& f) : func(f) {
         n = static_cast<int>(a.size());
         int max_log = 32 - __builtin_clz(n);
@@ -78,24 +125,86 @@ public:
         }
     }
 
-    T get(int from, int to) const {
+    T Query(int from, int to) const {
         assert(0 <= from && from <= to && to <= n - 1);
         int lg = 32 - __builtin_clz(to - from + 1) - 1;
         return func(mat[lg][from], mat[lg][to - (1 << lg) + 1]);
     }
 };
 
+// Point update + Range query
+// 1. Update: tree.Update(P, val)
+// 2. Query: tree.Query(L, R)
+// Requirement:
+// 0. Zero: 0 + a = a
+// 1. Associative law: a + b + c = (a + b) + c = a + (b + c)
+// example: addition, multiplication, maximum, minimum
+//
+// Range update + point query
+// 1. Update: tree.Update(L, val), tree.Update(R + 1, -val)
+// 2. Query: tree.Query(1, P)
+// Requirement:
+// 0. Zero: 0 + a = a
+// 1. Associative law: a + b + c = (a + b) + c = a + (b + c)
+// 2. a + b - b = a
+// example: addition, multiplication
+//
+// Note:
+// 1. Index start from 1
+template<typename T>
+class ZKWSegmentTree {
+private:
+    int M;
+    vector<T> sumv;
+
+public:
+    void Init(int n) {
+        for (M = 1; M < n; M <<= 1);
+        sumv = vector<T>(M<<1);
+        for (int i = 1; i < M<<1; i++)
+            // TODO: Overloaded
+            sumv[i] = 0;
+    }
+
+    void Update(int u, T v) {
+        for (u += M; u; u >>= 1)
+            // TODO: Overloaded
+            sumv[u] += v;
+    }
+
+    T Query(int u, int v) {
+        T ret = 0;
+        if (v < u) return ret;
+        for (u += M - 1, v += M + 1; u ^ v ^ 1; u >>= 1, v >>= 1) {
+            // TODO: Overloaded
+            if (~u&1) ret += sumv[u ^ 1];
+            if ( v&1) ret += sumv[v ^ 1];
+        }
+        return ret;
+    }
+};
+
+// Point update + Range query
+// Range update + point query
+//
+// Range update + Range query
+// Support lazy update: up / down
+// 0. Build: tree.Build(n)
+// 1. Update: tree.Update(L, R)
+// 2. Query: tree.Query(L, R)
+//
+// Note:
+// 1. Index start from 1
 template<typename T>
 class SegmentTree {
 private:
-    static const int N = 20;
 #define xxx int lc = o<<1, rc = o<<1|1, mid = (l + r) >> 1
 #define lson lc, l, mid
 #define rson rc, mid + 1, r
 
     int n;
-    T sumv[2<<N];
-    T addv[2<<N];
+    vector<T> sumv;
+    vector<T> addv;
 
     int ql, qr;
     T qv;
@@ -112,22 +221,26 @@ private:
 
     // 维护线段树
     void down(int o, int l, int r) {
+        // TODO: Overloaded
         if (addv[o]) {
-            addv[o << 1] += addv[o];
-            addv[o << 1 | 1] += addv[o];
+            xxx;
+            addv[lc] += addv[o];
+            addv[rc] += addv[o];
             sumv[o] += addv[o] * (r - l + 1);
             addv[o] = 0;
         }
     }
 
     void up(int o, int l, int r) {
-        int mid = (l + r) / 2;
-        sumv[o] = sumv[o << 1] + addv[o << 1] * (mid - l + 1) + sumv[o << 1 | 1] + addv[o << 1 | 1] * (r - mid);
+        // TODO: Overloaded
+        xxx;
+        sumv[o] = sumv[lc] + addv[lc] * (mid - l + 1) + sumv[rc] + addv[rc] * (r - mid);
     }
 
     // 区间修改
     void update(int o, int l, int r) {
         if (ql <= l && r <= qr) {
+            // TODO: Overloaded
             addv[o] += qv;
             return;
         }
@@ -150,25 +263,29 @@ private:
     }
 
 public:
-
     void Build(int n) {
         this->n = n;
-        // init(1, 1, n);
+        // TODO: Overloaded
+        sumv = vector<T>(2 * n - 1);
+        addv = vector<T>(2 * n - 1);
+        init(1, 1, n);
     }
 
     void Add(int l, int r, T v) {
-        if (l > r) return;
         ql = l;
         qr = r;
         qv = v;
+        if (l > r) return;
         update(1, 1, n);
     }
 
-    T Sum(int l, int r) {
-        if (l > r) return 0;
+    T Query(int l, int r) {
         ql = l;
         qr = r;
+        // TODO: Overloaded
         q_sum = 0;
+        if (l > r)
+            return q_sum;
         query(1, 1, n);
         return q_sum;
     }
