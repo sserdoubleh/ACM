@@ -7,9 +7,7 @@
  *   create time: 2021-08-01 05:06:46
  *   last modified: 2021-08-01 05:06:46
  */
-#include <cstdio>
-#include <random>
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Point update + Prefix query
@@ -237,7 +235,6 @@ private:
         sumv[o] = sumv[lc] + addv[lc] * (mid - l + 1) + sumv[rc] + addv[rc] * (r - mid);
     }
 
-    // 区间修改
     void update(int o, int l, int r) {
         if (ql <= l && r <= qr) {
             // TODO: Overloaded
@@ -250,7 +247,6 @@ private:
         up(o, l, r);
     }
 
-    // 区间查询
     void query(int o, int l, int r) {
         if (ql <= l && r <= qr) {
             q_sum += sumv[o] + addv[o] * (r - l + 1);
